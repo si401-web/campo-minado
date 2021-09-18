@@ -28,10 +28,10 @@ Informações necessárias em cada tela
 - [ ] usuário
 - [ ] senha
 
-#### Nova partida
-- [ ] Dimensões
-- [ ] Número de bombas
-- [ ] Modalidade de Partida: clássica / Timer
+#### Nova partida :heavy_check_mark:
+- [x] Dimensões
+- [x] Número de bombas
+- [x] Modalidade de Partida: clássica / Timer
 
 #### Jogo :heavy_check_mark:
 - [x] Tempo da partida

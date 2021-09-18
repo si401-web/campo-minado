@@ -4,6 +4,7 @@
 
 body {
 	background-color: #EEE;
+	padding-bottom: 36px;
 }
 
 header h1 {
@@ -29,10 +30,11 @@ ul#menu li a {
 aside#acoes {
 	position: absolute;
 	right: 12px;
+	z-index: 10;
 }
 
 button {
-	background: #666;
+	background: #966;
 	border: none;
 	padding: 12px 20px;
 	color: #FFF;
@@ -161,5 +163,7 @@ footer {
 	text-align: center;
 	position: fixed;
 	width: 100%;
-	bottom: 4px;
+	bottom: 0;
+	background-color: #DDD;
+	padding: 8px;
 }
