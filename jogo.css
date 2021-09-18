@@ -1,0 +1,165 @@
+* {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+	background-color: #EEE;
+}
+
+header h1 {
+	color: #000;
+	text-transform: uppercase;
+}
+
+nav {
+	float: right;
+}
+
+ul#menu li {
+	float: left;
+	list-style: none;
+	margin: 12px;
+}
+
+ul#menu li a {
+	text-decoration-line: overline underline;
+	color: #C00;
+}
+
+aside#acoes {
+	position: absolute;
+	right: 12px;
+}
+
+button {
+	background: #666;
+	border: none;
+	padding: 12px 20px;
+	color: #FFF;
+	border-radius: 2px;
+	font-weight: bold;
+}
+
+section#info {
+	text-align: center;
+	margin: 20px;
+}
+
+section#info span {
+	margin: 20px;
+}
+
+section#tempo span {
+	color: #FFF;
+	display: inline-block;
+	padding: 12px;
+	box-sizing: border-box;
+	font-weight: bold;
+}
+
+section#tempo #decorrido {
+	background: repeating-linear-gradient(
+		45deg,
+		#C66,
+		#633 10px,
+		#C66 10px,
+		#633 50px
+	);
+	width: 27%;
+}
+
+section#tempo #restante {
+	background: repeating-linear-gradient(
+		-45deg,
+		#6C6,
+		#363 10px,
+		#6C6 10px,
+		#363 50px
+	);
+	width: 73%;
+	text-align: right;
+}
+
+section#tabuleiro {
+	margin: 32px;
+}
+
+section#tabuleiro table {
+	margin: auto;
+}
+
+section#tabuleiro table tr {
+	height: 32px;
+}
+
+section#tabuleiro table tr td {
+	width: 32px;
+	background: repeating-linear-gradient(
+		-45deg,
+		#999,
+		#666 10px,
+		#999 10px,
+		#666 50px
+	);
+	text-align: center;
+	font-weight: bold;
+}
+
+section#tabuleiro .vazio {
+	background: repeating-linear-gradient(
+		45deg,
+		#DDD,
+		#AAA 10px,
+		#DDD 10px,
+		#AAA 50px
+	);
+}
+
+section#tabuleiro .explodiu {
+	background: repeating-linear-gradient(
+		135deg,
+		#D00,
+		#A00 10px,
+		#D00 10px,
+		#A00 50px
+	);
+}
+
+section#tabuleiro .casa1 {
+	color: #00F;
+}
+
+section#tabuleiro .casa2 {
+	color: #0C0;
+}
+
+section#tabuleiro .casa3 {
+	color: #C00;
+}
+
+section#tabuleiro .casa4 {
+	color: #C0C;
+}
+
+section#tabuleiro .casa5 {
+	color: #009;
+}
+
+section#tabuleiro .casa6 {
+	color: #060;
+}
+
+section#tabuleiro .casa7 {
+	color: #600;
+}
+
+section#tabuleiro .casa8 {
+	color: #606;
+}
+
+footer {
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	bottom: 4px;
+}

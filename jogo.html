@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<title>Campo Minado</title>
+		<meta charset="UTF-8" />
+		<meta name="keywords" content="Unicamp, Tecnologia, Análise, Desenvolvimento, Sistemas, Programação, Web, SI401, Jogo, Campo Minado" />
+		<link rel="stylesheet" type="text/css" href="jogo.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul id="menu">
+					<li>
+						<a href="#">Ranking</a>
+					</li>
+					<li>
+						<a href="#">Editar cadastro</a>
+					</li>
+					<li>
+						<a href="#">Logout</a>
+					</li>
+				</ul>
+			</nav>
+			<h1 title="Campo Minado">
+				Camp&#x1f4a3; Minad&#x1f4a3;
+			</h1>
+		</header>
+
+		<section id="tempo">
+			<span id="decorrido">00:27</span><span id="restante">01:13</span>
+		</section>
+
+		<section id="tabuleiro">
+			<table>
+				<tr class="row-0">
+					<td class="col-0 vazio"></td>
+					<td class="col-1 vazio"></td>
+					<td class="col-2 vazio"></td>
+					<td class="col-3 vazio"></td>
+					<td class="col-4 vazio"></td>
+					<td class="col-5 vazio"></td>
+					<td class="col-6 vazio"></td>
+					<td class="col-7 vazio"></td>
+					<td class="col-8 vazio"></td>
+				</tr>
+				<tr class="row-1">
+					<td class="col-0 vazio"></td>
+					<td class="col-1 vazio"></td>
+					<td class="col-2 vazio"></td>
+					<td class="col-3 vazio"></td>
+					<td class="col-4 vazio"></td>
+					<td class="col-5 vazio"></td>
+					<td class="col-6 vazio"></td>
+					<td class="col-7 vazio"></td>
+					<td class="col-8 vazio"></td>
+				</tr>
+				<tr class="row-2">
+					<td class="col-0 vazio casa1">1</td>
+					<td class="col-1 vazio casa2">2</td>
+					<td class="col-2 vazio casa2">2</td>
+					<td class="col-3 vazio casa1">1</td>
+					<td class="col-4 vazio"></td>
+					<td class="col-5 vazio"></td>
+					<td class="col-6 vazio"></td>
+					<td class="col-7 vazio"></td>
+					<td class="col-8 vazio"></td>
+				</tr>
+				<tr class="row-3">
+					<td class="col-0"></td>
+					<td class="col-1">&#x1f4a3;</td>
+					<td class="col-2">&#x1f4a3;</td>
+					<td class="col-3 vazio casa1">1</td>
+					<td class="col-4 vazio"></td>
+					<td class="col-5 vazio"></td>
+					<td class="col-6 vazio"></td>
+					<td class="col-7 vazio"></td>
+					<td class="col-8 vazio"></td>
+				</tr>
+				<tr class="row-4">
+					<td class="col-0">&#x1f4a3;</td>
+					<td class="col-1"></td>
+					<td class="col-2"></td>
+					<td class="col-3 vazio casa2">2</td>
+					<td class="col-4 vazio"></td>
+					<td class="col-5 vazio"></td>
+					<td class="col-6 vazio"></td>
+					<td class="col-7 vazio"></td>
+					<td class="col-8 vazio"></td>
+				</tr>
+				<tr class="row-5">
+					<td class="col-0">&#x1f4a3;</td>
+					<td class="col-1"></td>
+					<td class="col-2">&#x1f4a3;</td>
+					<td class="col-3 vazio casa1">1</td>
+					<td class="col-4 vazio"></td>
+					<td class="col-5 vazio casa1">1</td>
+					<td class="col-6 vazio casa2">2</td>
+					<td class="col-7 vazio casa2">2</td>
+					<td class="col-8 vazio casa1">1</td>
+				</tr>
+				<tr class="row-6">
+					<td class="col-0"></td>
+					<td class="col-1"></td>
+					<td class="col-2"></td>
+					<td class="col-3 vazio casa2">2</td>
+					<td class="col-4 vazio"></td>
+					<td class="col-5 vazio casa1">1</td>
+					<td class="col-6">&#x1f4a3;</td>
+					<td class="col-7">&#x1f4a3;</td>
+					<td class="col-8"></td>
+				</tr>
+				<tr class="row-7">
+					<td class="col-0"></td>
+					<td class="col-1"></td>
+					<td class="col-2 explodiu">&#x1f4a3;</td>
+					<td class="col-3 vazio casa1">1</td>
+					<td class="col-4 vazio"></td>
+					<td class="col-5 vazio casa1">1</td>
+					<td class="col-6 vazio casa4">4</td>
+					<td class="col-7">&#x1f4a3;</td>
+					<td class="col-8"></td>
+				</tr>
+				<tr class="row-8">
+					<td class="col-0"></td>
+					<td class="col-1"></td>
+					<td class="col-2 vazio casa1">1</td>
+					<td class="col-3 vazio casa1">1</td>
+					<td class="col-4 vazio"></td>
+					<td class="col-5 vazio"></td>
+					<td class="col-6 vazio casa2">2</td>
+					<td class="col-7">&#x1f4a3;</td>
+					<td class="col-8"></td>
+				</tr>
+			</table>
+		</section>
+
+		<section id="info">
+			<span id="modalidade">Modalidade Clássica</span>
+			<br />
+			<span id="dimensoes">9 x 9 casas</span>
+			<span id="bombas">10 bombas</span>
+		</section>
+
+		<aside id="acoes">
+			<button id="trapaca">Trapaça</button>
+		</aside>
+
+		<footer>
+			SI401 | Programação para a Web
+		</footer>
+	</body>
+</html>
