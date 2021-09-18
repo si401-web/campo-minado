@@ -33,14 +33,14 @@ Informações necessárias em cada tela
 - [ ] Número de bombas
 - [ ] Modalidade de Partida: clássica / Timer
 
-#### Jogo
-- [ ] Tempo da partida
-- [ ] Dimensões
-- [ ] Número de bombas
-- [ ] Modalidade
-- [ ] Tempo restante
-- [ ] Botão trapaça
-- [ ] Tabuleiro
+#### Jogo :heavy_check_mark:
+- [x] Tempo da partida
+- [x] Dimensões
+- [x] Número de bombas
+- [x] Modalidade
+- [x] Tempo restante
+- [x] Botão trapaça
+- [x] Tabuleiro
 
 #### Histórico
 - [ ] nome
