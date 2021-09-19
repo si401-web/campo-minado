@@ -1,9 +1,24 @@
+* {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .container {
+  background-color: #EEE;
   position: relative;
   margin: auto;
   width: 25%;
   border: none;
 } 
+
+header h1 {
+	color: #000;
+	text-transform: uppercase;
+}
+
+body {
+	background-color: #EEE;
+	padding-bottom: 36px;
+}
 
 button {
   background-color: green;
@@ -32,4 +47,13 @@ h2{
 span.cad {
   float: right;
   padding-top: 16px;
+}
+
+footer {
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	background-color: #DDD;
+	padding: 8px;
 }
