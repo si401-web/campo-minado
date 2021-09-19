@@ -14,10 +14,10 @@ Telas logadas:
 
 Informações necessárias em cada tela
 
-#### Login
-- [ ] Usuário
-- [ ] Senha
-- [ ] Link cadastro
+#### Login :heavy_check_mark:
+- [x] Usuário
+- [x] Senha
+- [x] Link cadastro
 
 #### Cadastro
 - [ ] nome completo
