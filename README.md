@@ -51,10 +51,10 @@ Informações necessárias em cada tela
 - [ ] resultado
 - [ ] data/hora
 
-#### Ranking
-- [ ] Username
-- [ ] Dados da partida (igual histórico)
-- [ ] 10 jogadores
+#### Ranking :heavy_check_mark:
+- [x] Username
+- [x] Dados da partida (igual histórico)
+- [x] 10 jogadores
 
 #### Editar cadastro
 - [ ] Igual a criação de cadastro
