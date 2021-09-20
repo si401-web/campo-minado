@@ -16,6 +16,10 @@ nav {
 	float: right;
 }
 
+ul#menu {
+	margin-top: 0;
+}
+
 ul#menu li {
 	float: left;
 	list-style: none;
