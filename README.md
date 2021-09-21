@@ -19,7 +19,7 @@ Informações necessárias em cada tela
 - [x] Senha
 - [x] Link cadastro
 
-#### Cadastro
+#### Cadastro :heavy_check_mark:
 - [x] nome completo
 - [x] data de nascimento
 - [x] CPF
@@ -56,6 +56,6 @@ Informações necessárias em cada tela
 - [x] Dados da partida (igual histórico)
 - [x] 10 jogadores
 
-#### Editar cadastro
+#### Editar cadastro :heavy_check_mark:
 - [x] Igual a criação de cadastro
 - [x] Campos data, cpf e username não são editáveis
