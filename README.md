@@ -42,7 +42,7 @@ Informações necessárias em cada tela
 - [x] Botão trapaça
 - [x] Tabuleiro
 
-#### Histórico
+#### Histórico :heavy_check_mark:
 - [x] nome
 - [x] dimensões
 - [x] bombas
