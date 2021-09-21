@@ -20,13 +20,13 @@ Informações necessárias em cada tela
 - [x] Link cadastro
 
 #### Cadastro
-- [ ] nome completo
-- [ ] data de nascimento
-- [ ] CPF
-- [ ] telefone
-- [ ] e-mail
-- [ ] usuário
-- [ ] senha
+- [x] nome completo
+- [x] data de nascimento
+- [x] CPF
+- [x] telefone
+- [x] e-mail
+- [x] usuário
+- [x] senha
 
 #### Nova partida :heavy_check_mark:
 - [x] Dimensões
@@ -57,5 +57,5 @@ Informações necessárias em cada tela
 - [x] 10 jogadores
 
 #### Editar cadastro
-- [ ] Igual a criação de cadastro
-- [ ] Campos data, cpf e username não são editáveis
+- [x] Igual a criação de cadastro
+- [x] Campos data, cpf e username não são editáveis
