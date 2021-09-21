@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Cadastro</title>
+        <title>Alterar Cadastro</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="cadastro.css">
     </head>
@@ -14,11 +14,11 @@
                 <div class="container">
                     <h1>Cadastro</h1>
                         Nome Completo
-                        <input type="text"/>
+                        <input id="readonly" type="text" readonly/>
                         Data de Nascimento
                         <input type="text" placeholder="00/00/0000"/>
                         CPF
-                        <input type="text" placeholder="000.000.000-00"/> 
+                        <input id="readonly" type="text" placeholder="000.000.000-00" readonly/> 
                         Telefone
                         <input type="text" placeholder="(xx)xxxxx-xxxx"/>
                         E-mail
@@ -26,7 +26,7 @@
                     <h1>Dados Para Login</h1>
                     <br/>
                         Usuario
-                        <input type="text"/>
+                        <input id="readonly" type="text" readonly/>
                         senha
                         <input type="text"/>
                         <br/>
