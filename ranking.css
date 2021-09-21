@@ -27,7 +27,13 @@ ul#menu li a {
     color: #C00;
 }
 
+
 /* Elementos locais */
+
+section h2 {
+    width: 90%;
+    margin: auto;
+}
 
 #ranking {
     width: 50%;
@@ -39,8 +45,6 @@ ul#menu li a {
     margin-top: 26px;
     margin-left: auto;
     margin-right: auto;
-
-
     height: 490px;
     background-color: #E0E0E0;
     overflow-x: auto;
@@ -62,6 +66,7 @@ th {
 tr:nth-child(odd) {
     background-color: #ADADAD;
 }
+
 
 /* END OF Elementos locais */
 
