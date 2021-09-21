@@ -43,13 +43,13 @@ Informações necessárias em cada tela
 - [x] Tabuleiro
 
 #### Histórico
-- [ ] nome
-- [ ] dimensões
-- [ ] bombas
-- [ ] modalidade
-- [ ] tempo
-- [ ] resultado
-- [ ] data/hora
+- [x] nome
+- [x] dimensões
+- [x] bombas
+- [x] modalidade
+- [x] tempo
+- [x] resultado
+- [x] data/hora
 
 #### Ranking :heavy_check_mark:
 - [x] Username
