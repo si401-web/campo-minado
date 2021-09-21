@@ -1,74 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<title>Campo Minado</title>
-		<meta charset="UTF-8" />
-		<meta name="keywords" content="Unicamp, Tecnologia, Análise, Desenvolvimento, Sistemas, Programação, Web, SI401, Jogo, Campo Minado" />
-		<link rel="stylesheet" type="text/css" href="nova_partida.css" />
-	</head>
-	<body>
-		<header>
-			<nav>
-				<ul id="menu">
-					<li>
-						<a href="historico.html">Histórico</a>
-					</li>
-					<li>
-						<a href="ranking.html">Ranking</a>
-					</li>
-					<li>
-						<a href="#">Editar cadastro</a>
-					</li>
-					<li>
-						<a href="login.html">Logout</a>
-					</li>
-				</ul>
-			</nav>
-			<h1 title="Campo Minado">
-				Camp&#x1f4a3; Minad&#x1f4a3;
-			</h1>
-		</header>
 
-		<section id="form">
-			<h2>Nova partida</h2>
+<head>
+    <title>Campo Minado | Nova partida</title>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Unicamp, Tecnologia, Análise, Desenvolvimento, Sistemas, Programação, Web, SI401, Jogo, Campo Minado" />
+    <link rel="stylesheet" type="text/css" href="nova_partida.css" />
+</head>
 
-			<hr />
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li>
+                    <a href="historico.html">Histórico</a>
+                </li>
+                <li>
+                    <a href="ranking.html">Ranking</a>
+                </li>
+                <li>
+                    <a href="#">Editar cadastro</a>
+                </li>
+                <li>
+                    <a href="login.html">Logout</a>
+                </li>
+            </ul>
+        </nav>
+        <h1 title="Campo Minado">
+            Camp&#x1f4a3; Minad&#x1f4a3;
+        </h1>
+    </header>
 
-			<h3>Dimensões</h3>
-			<p class="texto">
-				<label for="colunas">Colunas</label>
-				<input type="number" id="colunas" name="colunas" value="9" />
-			</p>
-			<p class="texto">
-				<label for="linhas">Linhas</label>
-				<input type="number" id="linhas" name="linhas" value="9" />
-			</p>
+    <section id="form">
+        <h2>Nova partida</h2>
 
-			<hr />
+        <hr />
 
-			<h3>Bombas</h3>
-			<p class="texto">
-				<label for="bombas">Quantidade</label>
-				<input type="number" id="bombas" name="bombas" value="10" />
-			</p>
+        <h3>Dimensões</h3>
+        <p class="texto">
+            <label for="colunas">Colunas</label>
+            <input type="number" id="colunas" name="colunas" value="9" />
+        </p>
+        <p class="texto">
+            <label for="linhas">Linhas</label>
+            <input type="number" id="linhas" name="linhas" value="9" />
+        </p>
 
-			<hr />
+        <hr />
 
-			<h3>Modalidade</h3>
-			<p>
-				<input type="radio" id="modalidade_classica" name="modalidade" value="classica" />
-				<label for="modalidade_classica">Clássica</label>
-				<input type="radio" id="modalidade_rivotril" name="modalidade" value="rivotril" />
-				<label for="modalidade_rivotril">Rivotril</label>
-			</p>
+        <h3>Bombas</h3>
+        <p class="texto">
+            <label for="bombas">Quantidade</label>
+            <input type="number" id="bombas" name="bombas" value="10" />
+        </p>
 
-			<hr />
+        <hr />
 
-			<button>Iniciar</button>
-		</section>
+        <h3>Modalidade</h3>
+        <p>
+            <input type="radio" id="modalidade_classica" name="modalidade" value="classica" />
+            <label for="modalidade_classica">Clássica</label>
+            <input type="radio" id="modalidade_rivotril" name="modalidade" value="rivotril" />
+            <label for="modalidade_rivotril">Rivotril</label>
+        </p>
 
-		<footer>
-			SI401 | Programação para a Web
-		</footer>
-	</body>
+        <hr />
+
+        <button>Iniciar</button>
+    </section>
+
+    <footer>
+        SI401 | Programação para a Web
+    </footer>
+</body>
+
 </html>
