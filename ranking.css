@@ -23,16 +23,28 @@ ul#menu li {
 }
 
 ul#menu li a {
-    text-decoration-line: overline underline;
-    color: #C00;
+    text-decoration: none;
+    color: #fff;
+    background-color: #C00;
+    border: 1px solid #C00;
+    padding: 10px 30px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
 }
 
+ul#menu li a:hover {
+    background-color: #EEE;
+    color: #C00;
+    box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.24), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
+}
 
 /* Elementos locais */
 
 section h2 {
     width: 90%;
     margin: auto;
+    float: left;
 }
 
 #ranking {
@@ -66,7 +78,6 @@ th {
 tr:nth-child(odd) {
     background-color: #ADADAD;
 }
-
 
 /* END OF Elementos locais */
 
