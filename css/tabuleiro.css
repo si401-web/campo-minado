@@ -14,14 +14,14 @@ aside#acoes {
 }
 
 #tempo span {
-	color: #FFF;
 	display: inline-block;
-	padding: 12px;
+	padding: 12px 0;
 	box-sizing: border-box;
 	font-weight: bold;
 }
 
-#tempo #decorrido {
+#tempo .decorrido {
+	color: #FFF;
 	background: repeating-linear-gradient(
 		45deg,
 		#C66,
@@ -29,10 +29,10 @@ aside#acoes {
 		#C66 10px,
 		#633 50px
 	);
-	width: 27%;
 }
 
-#tempo #restante {
+#tempo .restante {
+	color: #FFF;
 	background: repeating-linear-gradient(
 		-45deg,
 		#6C6,
@@ -40,7 +40,6 @@ aside#acoes {
 		#6C6 10px,
 		#363 50px
 	);
-	width: 73%;
 	text-align: right;
 }
 
