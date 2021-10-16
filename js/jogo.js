@@ -11,9 +11,10 @@ var board = [
 ]
 
 var exploded = false;
+var win = false;
 
 function openBlock(line, column) {
-	if (exploded)
+	if (exploded || win)
 		return;
 
 	var id = "cell-" + line + "-" + column;
@@ -34,22 +35,31 @@ function openBlock(line, column) {
 	if (value == "B") {
 		block.innerHTML = "&#x1f4a3;";
 		block.classList.add("explodiu")
+
 		toggleBombs("&#x1f4a3;");
 		exploded = true;
+		alert('Você perdeu...');
+
 	} else if (value == 0) {
 		openBlock(line-1, column-1);
 		openBlock(line-1, column);
 		openBlock(line-1, column+1);
-		openBlock(line, column-1);
 		openBlock(line, column+1);
-		openBlock(line+1, column-1);
-		openBlock(line+1, column);
 		openBlock(line+1, column+1);
+		openBlock(line+1, column);
+		openBlock(line+1, column-1);
+		openBlock(line, column-1);
 	} else {
 		block.innerHTML = value;
 		block.classList.add("casa" + value)
 	}
 
+	win = checkWin();
+
+	if (win) {
+		toggleBombs("&#9873;");
+		alert('Você ganhou!');
+	}
 }
 
 function toggleBombs(icon) {
@@ -65,7 +75,19 @@ function toggleBombs(icon) {
 
 	if (icon == "X") {
 		setTimeout(() => {
-			toggleBombs("")
+			toggleBombs(win ? "&#9873;" : "")
 		}, 5000);
 	}
+}
+
+function checkWin() {
+	for(var l = 0; l < board.length; l++) {
+		for(var c = 0; c < board[l].length; c++) {
+			if (board[l][c] != "B" && board[l][c] != 9) {
+				return false;
+			}
+		}
+	}
+
+	return true;
 }
