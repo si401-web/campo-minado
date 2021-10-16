@@ -19,11 +19,16 @@ section#form input {
 } 
   
 input{
-     width: 100%;
-     padding: 12px 20px;
+    width: 100%;
+    padding: 12px 20px;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
 }
 
 .readonly{
