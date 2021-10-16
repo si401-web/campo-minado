@@ -4,16 +4,16 @@ aside#acoes {
 	z-index: 10;
 }
 
-section#info {
+#info {
 	text-align: center;
 	margin: 20px;
 }
 
-section#info span {
+#info span {
 	margin: 20px;
 }
 
-section#tempo span {
+#tempo span {
 	color: #FFF;
 	display: inline-block;
 	padding: 12px;
@@ -21,7 +21,7 @@ section#tempo span {
 	font-weight: bold;
 }
 
-section#tempo #decorrido {
+#tempo #decorrido {
 	background: repeating-linear-gradient(
 		45deg,
 		#C66,
@@ -32,7 +32,7 @@ section#tempo #decorrido {
 	width: 27%;
 }
 
-section#tempo #restante {
+#tempo #restante {
 	background: repeating-linear-gradient(
 		-45deg,
 		#6C6,
@@ -44,19 +44,19 @@ section#tempo #restante {
 	text-align: right;
 }
 
-section#tabuleiro {
+#tabuleiro {
 	margin: 32px;
 }
 
-section#tabuleiro table {
+#tabuleiro table {
 	margin: auto;
 }
 
-section#tabuleiro table tr {
+#tabuleiro table tr {
 	height: 32px;
 }
 
-section#tabuleiro table tr td {
+#tabuleiro table tr td {
 	width: 32px;
 	background: repeating-linear-gradient(
 		-45deg,
@@ -69,7 +69,7 @@ section#tabuleiro table tr td {
 	font-weight: bold;
 }
 
-section#tabuleiro .vazio {
+#tabuleiro .vazio {
 	background: repeating-linear-gradient(
 		45deg,
 		#DDD,
@@ -79,7 +79,7 @@ section#tabuleiro .vazio {
 	);
 }
 
-section#tabuleiro .explodiu {
+#tabuleiro .explodiu {
 	background: repeating-linear-gradient(
 		135deg,
 		#D00,
@@ -89,34 +89,34 @@ section#tabuleiro .explodiu {
 	);
 }
 
-section#tabuleiro .casa1 {
+#tabuleiro .casa1 {
 	color: #00F;
 }
 
-section#tabuleiro .casa2 {
+#tabuleiro .casa2 {
 	color: #0C0;
 }
 
-section#tabuleiro .casa3 {
+#tabuleiro .casa3 {
 	color: #C00;
 }
 
-section#tabuleiro .casa4 {
+#tabuleiro .casa4 {
 	color: #C0C;
 }
 
-section#tabuleiro .casa5 {
+#tabuleiro .casa5 {
 	color: #009;
 }
 
-section#tabuleiro .casa6 {
+#tabuleiro .casa6 {
 	color: #060;
 }
 
-section#tabuleiro .casa7 {
+#tabuleiro .casa7 {
 	color: #600;
 }
 
-section#tabuleiro .casa8 {
+#tabuleiro .casa8 {
 	color: #606;
 }
