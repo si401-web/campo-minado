@@ -1,0 +1,36 @@
+section#form {
+	text-align: center;
+}
+
+section#form .texto label {
+	display: block;
+}
+
+section#form input {
+	font-size: 1.1em;
+}
+
+.container {
+    background-color: #EEE;
+    position: relative;
+    margin: auto;
+    width: 25%;
+    border: none;
+} 
+  
+input{
+     width: 100%;
+     padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#readonly{
+	background-color:#bdbdbd;
+}
+
+span.cad {
+    float: right;
+    padding-top: 16px;
+}

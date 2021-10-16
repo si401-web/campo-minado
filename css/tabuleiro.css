@@ -1,49 +1,7 @@
-* {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-body {
-	background-color: #EEE;
-	padding-bottom: 36px;
-}
-
-header h1 {
-	color: #000;
-	text-transform: uppercase;
-}
-
-nav {
-	float: right;
-}
-
-ul#menu {
-	margin-top: 0;
-}
-
-ul#menu li {
-	float: left;
-	list-style: none;
-	margin: 12px;
-}
-
-ul#menu li a {
-	text-decoration-line: overline underline;
-	color: #C00;
-}
-
 aside#acoes {
 	position: absolute;
 	right: 12px;
 	z-index: 10;
-}
-
-button {
-	background: #966;
-	border: none;
-	padding: 12px 20px;
-	color: #FFF;
-	border-radius: 2px;
-	font-weight: bold;
 }
 
 section#info {
@@ -161,13 +119,4 @@ section#tabuleiro .casa7 {
 
 section#tabuleiro .casa8 {
 	color: #606;
-}
-
-footer {
-	text-align: center;
-	position: fixed;
-	width: 100%;
-	bottom: 0;
-	background-color: #DDD;
-	padding: 8px;
 }

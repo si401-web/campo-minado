@@ -1,0 +1,94 @@
+* {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+	background-color: #EEE;
+	padding-bottom: 36px;
+}
+
+header h1 {
+	color: #000;
+	text-transform: uppercase;
+}
+
+h2 {
+    margin: auto;
+}
+
+nav {
+	float: right;
+}
+
+ul#menu {
+	margin-top: 0;
+}
+
+ul#menu li {
+	float: left;
+	list-style: none;
+	margin: 12px;
+}
+
+ul#menu li a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #C00;
+    border: 1px solid #C00;
+    padding: 10px 30px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+}
+
+ul#menu li a:hover {
+    background-color: #EEE;
+    color: #C00;
+    box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.24), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+button {
+	background: #966;
+	border: none;
+	padding: 12px 20px;
+	color: #FFF;
+	border-radius: 2px;
+	font-weight: bold;
+	width: 100%;
+}
+
+button:hover {
+    opacity: 0.75;
+}
+
+hr {
+	width: 50%;
+	border-color: #C00;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+}
+
+
+/* Fim do scrollbar*/
+
+footer {
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	background-color: #DDD;
+	padding: 8px;
+}
