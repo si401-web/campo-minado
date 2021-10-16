@@ -8,6 +8,7 @@
         content="Unicamp, Tecnologia, Análise, Desenvolvimento, Sistemas, Programação, Web, SI401, Jogo, Campo Minado" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/form.css" />
+    <script type="text/javascript" src="js/nova_partida.js"></script>
 </head>
 
 <body>
@@ -38,41 +39,43 @@
     </header>
 
     <section class="container">
-        <h2>Nova partida</h2>
+        <form name="partida" onsubmit="return criarPartida()" action="/nova_partida.html">
+            <h2>Nova partida</h2>
 
-        <hr />
+            <hr />
 
-        <h3>Dimensões</h3>
-        <p class="texto">
-            <label for="colunas">Colunas</label>
-            <input type="number" id="colunas" name="colunas" value="9" />
-        </p>
-        <p class="texto">
-            <label for="linhas">Linhas</label>
-            <input type="number" id="linhas" name="linhas" value="9" />
-        </p>
+            <h3>Dimensões</h3>
+            <p class="texto">
+                <label for="colunas">Colunas</label>
+                <input type="number" id="colunas" name="colunas" value="9" required />
+            </p>
+            <p class="texto">
+                <label for="linhas">Linhas</label>
+                <input type="number" id="linhas" name="linhas" value="9" required />
+            </p>
 
-        <hr />
+            <hr />
 
-        <h3>Bombas</h3>
-        <p class="texto">
-            <label for="bombas">Quantidade</label>
-            <input type="number" id="bombas" name="bombas" value="10" />
-        </p>
+            <h3>Bombas</h3>
+            <p class="texto">
+                <label for="bombas">Quantidade</label>
+                <input type="number" id="bombas" name="bombas" value="10" required />
+            </p>
 
-        <hr />
+            <hr />
 
-        <h3>Modalidade</h3>
-        <p>
-            <input type="radio" id="modalidade_classica" name="modalidade" value="classica" />
-            <label for="modalidade_classica">Clássica</label>
-            <input type="radio" id="modalidade_rivotril" name="modalidade" value="rivotril" />
-            <label for="modalidade_rivotril">Rivotril</label>
-        </p>
+            <h3>Modalidade</h3>
+            <p>
+                <input type="radio" id="modalidade_classica" name="modalidade" value="classica" checked required />
+                <label for="modalidade_classica">Clássica</label>
+                <input type="radio" id="modalidade_rivotril" name="modalidade" value="rivotril" />
+                <label for="modalidade_rivotril">Rivotril</label>
+            </p>
 
-        <hr />
+            <hr />
 
-        <button>Iniciar</button>
+            <button type="submit">Iniciar</button>
+        </form>
     </section>
 
     <footer>
