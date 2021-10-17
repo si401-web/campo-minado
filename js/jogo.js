@@ -57,7 +57,7 @@ function createBoard() {
 		table += "<tr>"
 		for(var c = 0; c < columns; c++) {
 			row.push(0);
-			table += "<td id='cell-" + l + "-" + c + "' onclick='openBlock(" + l + ", " + c + ")'></td>"
+			table += "<td id='cell-" + l + "-" + c + "' onclick='openBlock(" + l + ", " + c + ", true)'></td>"
 		}
 		table += "</tr>"
 		board.push(row);
@@ -144,7 +144,7 @@ function adjustTimer(id, number) {
 	element.style.width = number * 100 / limitTime + "%";
 }
 
-function openBlock(line, column) {
+function openBlock(line, column, userClicked) {
 	if (finished())
 		return;
 
@@ -172,23 +172,24 @@ function openBlock(line, column) {
 
 	} else if (value == 0) {
 		openBlock(line-1, column-1);
-		openBlock(line-1, column);
+		openBlock(line-1, column  );
 		openBlock(line-1, column+1);
-		openBlock(line, column+1);
+		openBlock(line  , column+1);
 		openBlock(line+1, column+1);
-		openBlock(line+1, column);
+		openBlock(line+1, column  );
 		openBlock(line+1, column-1);
-		openBlock(line, column-1);
+		openBlock(line  , column-1);
 	} else {
 		block.innerHTML = value;
 		block.classList.add("casa" + value)
 	}
 
-	win = checkWin();
-
-	if (win) {
-		toggleBombs("&#9873;");
-		alert("Você ganhou!");
+	if (userClicked) {
+		win = checkWin();
+		if (win) {
+			toggleBombs("&#9873;");
+			alert("Você ganhou!");
+		}
 	}
 }
 
