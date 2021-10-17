@@ -1,117 +1,106 @@
-var board = [
-	[  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  ],
-	[  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  ],
-	[  1 ,  2 ,  2 ,  1 ,  0 ,  0 ,  0 ,  0 ,  0  ],
-	[  2 , "B", "B",  1 ,  0 ,  0 ,  0 ,  0 ,  0  ],
-	[ "B",  5 ,  3 ,  2 ,  0 ,  0 ,  0 ,  0 ,  0  ],
-	[ "B",  3 , "B",  1 ,  0 ,  1 ,  2 ,  2 ,  1  ],
-	[  1 ,  3 ,  2 ,  2 ,  0 ,  1 , "B", "B",  2  ],
-	[  0 ,  1 , "B",  1 ,  0 ,  1 ,  4 , "B",  3  ],
-	[  0 ,  1 ,  1 ,  1 ,  0 ,  0 ,  2 , "B",  2  ],
-]
+var params = new URLSearchParams(window.location.search);
+var lines = parseInt(params.get("linhas"));
+var columns = parseInt(params.get("colunas"));
+var bombs = parseInt(params.get("bombas"));
+var limitedTime = params.get("modalidade") == "rivotril";
 
-var exploded = false;
+var board = []
+
 var win = false;
+var exploded = false;
 var timeout = false;
-
-function finished() {
-	return win || exploded || timeout;
-}
-
-function openBlock(line, column) {
-	if (finished())
-		return;
-
-	var id = "cell-" + line + "-" + column;
-	var block = document.getElementById(id);
-
-	if (!block)
-		return;
-
-	var value = board[line][column];
-
-	if (value == 9)
-		return;
-
-	block.classList.add("vazio")
-	board[line][column] = 9;
-
-	console.log(line, column, value);
-	if (value == "B") {
-		block.innerHTML = "&#x1f4a3;";
-		block.classList.add("explodiu")
-
-		toggleBombs("&#x1f4a3;");
-		exploded = true;
-		alert("Você perdeu...");
-
-	} else if (value == 0) {
-		openBlock(line-1, column-1);
-		openBlock(line-1, column);
-		openBlock(line-1, column+1);
-		openBlock(line, column+1);
-		openBlock(line+1, column+1);
-		openBlock(line+1, column);
-		openBlock(line+1, column-1);
-		openBlock(line, column-1);
-	} else {
-		block.innerHTML = value;
-		block.classList.add("casa" + value)
-	}
-
-	win = checkWin();
-
-	if (win) {
-		toggleBombs("&#9873;");
-		alert("Você ganhou!");
-	}
-}
-
-function toggleBombs(icon, explode) {
-	for(var l = 0; l < board.length; l++) {
-		for(var c = 0; c < board[l].length; c++) {
-			if (board[l][c] == "B") {
-				var bombId = "cell-" + l + "-" + c;
-				var bombBlock = document.getElementById(bombId);
-				bombBlock.innerHTML = icon;
-
-				if (explode) {
-					bombBlock.classList.add("explodiu");
-				}
-			}
-		}
-	}
-
-	if (icon == "X") {
-		setTimeout(() => {
-			toggleBombs(win ? "&#9873;" : "")
-		}, 5000);
-	}
-}
-
-function checkWin() {
-	for(var l = 0; l < board.length; l++) {
-		for(var c = 0; c < board[l].length; c++) {
-			if (board[l][c] != "B" && board[l][c] != 9) {
-				return false;
-			}
-		}
-	}
-
-	return true;
-}
 
 var spentTime = 0;
 var limitTime = 0;
 
+function createGame() {
+	adjustNumbers();
+	createBoard();
+	addBombs();
+	timer();
+}
+
+function adjustNumbers() {
+	if (isNaN(lines))
+		lines = 10;
+
+	if (lines < 1)
+		lines = 1;
+
+	if (lines > 50)
+		lines = 50;
+
+	if (isNaN(columns))
+		columns = 10;
+
+	if (columns < 1)
+		columns = 1;
+
+	if (columns > 50)
+		columns = 50;
+
+	if (isNaN(bombs))
+		bombs = Math.floor(Math.sqrt(size));
+
+	var size = lines * columns;
+	if (bombs >= size) bombs = size - 1;
+
+	if (limitedTime)
+		limitTime = Math.floor(bombs / size * 1000) + 1;
+}
+
+function createBoard() {
+	var table = "<table>";
+
+	for(var l = 0; l < lines; l++) {
+		var row = []
+		table += "<tr>"
+		for(var c = 0; c < columns; c++) {
+			row.push(0);
+			table += "<td id='cell-" + l + "-" + c + "' onclick='openBlock(" + l + ", " + c + ")'></td>"
+		}
+		table += "</tr>"
+		board.push(row);
+	}
+
+	table += "</table>";
+
+	var element = document.getElementById("tabuleiro");
+	element.innerHTML = table;
+}
+
+function addBombs() {
+	while (bombs > 0) {
+		var l = Math.floor(Math.random() * lines);
+		var c = Math.floor(Math.random() * columns);
+
+		if (l < lines && c < columns && board[l][c] != "B") {
+			board[l][c] = "B";
+
+			plusOne(l-1,c-1);
+			plusOne(l-1,c);
+			plusOne(l-1,c+1);
+			plusOne(l,c+1);
+			plusOne(l+1,c+1);
+			plusOne(l+1,c);
+			plusOne(l+1,c-1);
+			plusOne(l,c-1);
+			bombs--;
+		}
+	}
+}
+
+function plusOne(l, c) {
+	if (l >= 0 && l < lines && c >= 0 && c < columns && board[l][c] != "B") {
+		board[l][c]++;
+	}
+}
+
 function timer() {
-	var params = new URLSearchParams(window.location.search);
-	if (params.get("modalidade") == "rivotril") {
+	if (limitedTime) {
 		document.getElementById("decorrido").classList.add("decorrido");
 		document.getElementById("restante").classList.add("restante");
 		document.getElementById("modalidade").innerHTML = "Modalidade Rivotril";
-
-		limitTime = 180;
 	}
 
 	adjustTimers();
@@ -153,4 +142,92 @@ function adjustTimer(id, number) {
 	var element = document.getElementById(id);
 	element.innerHTML = "&nbsp;&nbsp;&nbsp;" + minutes + ":" + seconds + "&nbsp;&nbsp;&nbsp;";
 	element.style.width = number * 100 / limitTime + "%";
+}
+
+function openBlock(line, column) {
+	if (finished())
+		return;
+
+	var id = "cell-" + line + "-" + column;
+	var block = document.getElementById(id);
+
+	if (!block)
+		return;
+
+	var value = board[line][column];
+
+	if (value == 9)
+		return;
+
+	block.classList.add("vazio")
+	board[line][column] = 9;
+
+	if (value == "B") {
+		block.innerHTML = "&#x1f4a3;";
+		block.classList.add("explodiu")
+
+		toggleBombs("&#x1f4a3;");
+		exploded = true;
+		alert("Você perdeu...");
+
+	} else if (value == 0) {
+		openBlock(line-1, column-1);
+		openBlock(line-1, column);
+		openBlock(line-1, column+1);
+		openBlock(line, column+1);
+		openBlock(line+1, column+1);
+		openBlock(line+1, column);
+		openBlock(line+1, column-1);
+		openBlock(line, column-1);
+	} else {
+		block.innerHTML = value;
+		block.classList.add("casa" + value)
+	}
+
+	win = checkWin();
+
+	if (win) {
+		toggleBombs("&#9873;");
+		alert("Você ganhou!");
+	}
+}
+
+function toggleBombs(icon, explode) {
+	for(var l = 0; l < lines; l++) {
+		for(var c = 0; c < columns; c++) {
+			if (board[l][c] == "B") {
+				var bombId = "cell-" + l + "-" + c;
+				var bombBlock = document.getElementById(bombId);
+				bombBlock.innerHTML = icon;
+
+				if (explode) {
+					bombBlock.classList.add("explodiu");
+				}
+			}
+		}
+	}
+
+	if (icon == "X") {
+		setTimeout(() => {
+			toggleBombs(win ? "&#9873;" : "")
+		}, 5000);
+	}
+}
+
+function checkWin() {
+	if (finished()) return false;
+
+	for(var l = 0; l < lines; l++) {
+		for(var c = 0; c < columns; c++) {
+			if (board[l][c] != "B" && board[l][c] != 9) {
+				return false;
+			}
+		}
+	}
+
+	return true;
+}
+
+function finished() {
+	return win || exploded || timeout;
 }
