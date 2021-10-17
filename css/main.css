@@ -57,16 +57,6 @@ button {
 	width: 100%;
 }
 
-input[type=submit]{
-	background: #966;
-	border: none;
-	padding: 12px 20px;
-	color: #FFF;
-	border-radius: 2px;
-	font-weight: bold;
-	width: 100%;
-}
-
 button:hover {
     opacity: 0.75;
 }
@@ -74,13 +64,6 @@ button:hover {
 hr {
 	width: 100%;
 	border-color: #C00;
-}
-
-#login-error-msg {
-	font-weight: bold;
-	color: #8a0000;
-	text-align: center;
-	opacity: 0;
 }
 
 /* Scrollbar */

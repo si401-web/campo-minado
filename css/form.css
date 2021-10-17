@@ -31,6 +31,23 @@ input[type="radio"] {
     width: auto;
 }
 
+input[type=submit]{
+	background: #966;
+	border: none;
+	padding: 12px 20px;
+	color: #FFF;
+	border-radius: 2px;
+	font-weight: bold;
+	width: 100%;
+}
+
+#login-error-msg {
+	font-weight: bold;
+	color: #8a0000;
+	text-align: center;
+	opacity: 0;
+}
+
 .readonly{
 	background-color:#bdbdbd;
 }
