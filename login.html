@@ -20,24 +20,33 @@
 
     <section class="container">
         <h2>Entre no Campo Minado</h2>
-
-        <label for="username"><b>Usuário</b></label>
-        <input type="text" placeholder="Digite seu nome de usuário" name="nomeUsuario" id="username" required>
         <br />
-        <br />
-        <label for="password"><b>Senha</b></label>
-        <input type="password" placeholder="Digite sua senha" name="senha" id="password" required>
-        <br />
-        <br />
-        <button type="submit">Entrar</button>
+        <form class="form" id="login-form">
+            <label for="username"><b>Usuário</b></label>
+            <input type="text" placeholder="Digite seu nome de usuário" name="nomeUsuario" id="username" required>
+            <br />
+            <br />
+            <label for="password"><b>Senha</b></label>
+            <input type="password" placeholder="Digite sua senha" name="senha" id="password" required>
+            <br />
+            <br />
+            <input type="submit" value="Entrar" id="login-form-submit">
+        </form>
 
         <span class="cad">Ainda não tem conta? <a href="cadastro.html">Faça seu cadastro.</a></span>
+
+        <br />
+        <br />
+        <p id="login-error-msg">Usuário/senha inválido. Tente novamente. </p>
+
+        <p > *O usuário e senha por enquanto são "usuario" e "senha". </p>
     </section>
 
     <footer>
         SI401 | Programação para a Web
     </footer>
 
-</body>
+    <script src="js/login.js"></script>
 
+</body>
 </html>
