@@ -3,6 +3,7 @@ var lines = parseInt(params.get("linhas"));
 var columns = parseInt(params.get("colunas"));
 var bombs = parseInt(params.get("bombas"));
 var limitedTime = params.get("modalidade") == "rivotril";
+var aux = 0;
 
 var board = []
 
@@ -48,7 +49,7 @@ function adjustNumbers() {
 	if (limitedTime)
 		limitTime = Math.floor(bombs / size * 1000) + 1;
 }
-
+//Cria o Tabuleiro
 function createBoard() {
 	var table = "<table>";
 
@@ -68,7 +69,7 @@ function createBoard() {
 	var element = document.getElementById("tabuleiro");
 	element.innerHTML = table;
 }
-
+//Seleciona locais aleatorios para as bombas
 function addBombs() {
 	while (bombs > 0) {
 		var l = Math.floor(Math.random() * lines);
@@ -89,7 +90,7 @@ function addBombs() {
 		}
 	}
 }
-
+//Função que adiciona as bombas
 function plusOne(l, c) {
 	if (l >= 0 && l < lines && c >= 0 && c < columns && board[l][c] != "B") {
 		board[l][c]++;
@@ -107,6 +108,7 @@ function timer() {
 }
 
 function adjustTimers() {
+	var qtd = document.getElementById("qtd");
 	adjustTimer("decorrido", spentTime);
 
 	if (limitTime > 0) {
@@ -115,6 +117,7 @@ function adjustTimers() {
 		if (spentTime == limitTime) {
 			toggleBombs("&#x1f4a3;", true);
 			timeout = true;
+			qtd.innerHTML = "Quantidade de Celulas: " + aux;
 			alert("Você perdeu...");
 			return;
 		}
@@ -150,14 +153,18 @@ function openBlock(line, column, userClicked) {
 
 	var id = "cell-" + line + "-" + column;
 	var block = document.getElementById(id);
+	var qtd = document.getElementById("qtd");
 
-	if (!block)
+	if (!block){
 		return;
+	}
+
 
 	var value = board[line][column];
 
-	if (value == 9)
+	if (value == 9){
 		return;
+	}
 
 	block.classList.add("vazio")
 	board[line][column] = 9;
@@ -168,6 +175,7 @@ function openBlock(line, column, userClicked) {
 
 		toggleBombs("&#x1f4a3;");
 		exploded = true;
+		qtd.innerHTML = "Quantidade de Celulas: " + aux;
 		alert("Você perdeu...");
 
 	} else if (value == 0) {
@@ -188,9 +196,11 @@ function openBlock(line, column, userClicked) {
 		win = checkWin();
 		if (win) {
 			toggleBombs("&#9873;");
+			qtd.innerHTML = "Quantidade de Celulas: " + aux;
 			alert("Você ganhou!");
 		}
 	}
+	aux++;
 }
 
 function toggleBombs(icon, explode) {

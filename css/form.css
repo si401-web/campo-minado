@@ -31,6 +31,10 @@ input[type="radio"] {
     width: auto;
 }
 
+button:hover{
+	cursor: pointer;
+}
+
 input[type=submit]{
 	background: #966;
 	border: none;
@@ -39,6 +43,10 @@ input[type=submit]{
 	border-radius: 2px;
 	font-weight: bold;
 	width: 100%;
+}
+
+input[type=submit]:hover{
+	cursor: pointer
 }
 
 #login-error-msg {
