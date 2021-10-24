@@ -117,7 +117,6 @@ function adjustTimers() {
 		if (spentTime == limitTime) {
 			toggleBombs("&#x1f4a3;", true);
 			timeout = true;
-			qtd.innerHTML = "Quantidade de Celulas: " + aux;
 			alert("Você perdeu...");
 			return;
 		}
@@ -175,7 +174,6 @@ function openBlock(line, column, userClicked) {
 
 		toggleBombs("&#x1f4a3;");
 		exploded = true;
-		qtd.innerHTML = "Quantidade de Celulas: " + aux;
 		alert("Você perdeu...");
 
 	} else if (value == 0) {
@@ -192,15 +190,15 @@ function openBlock(line, column, userClicked) {
 		block.classList.add("casa" + value)
 	}
 
+	aux++;
 	if (userClicked) {
 		win = checkWin();
 		if (win) {
 			toggleBombs("&#9873;");
-			qtd.innerHTML = "Quantidade de Celulas: " + aux;
 			alert("Você ganhou!");
 		}
+		qtd.innerHTML = "Número de células abertas: " + aux;
 	}
-	aux++;
 }
 
 function toggleBombs(icon, explode) {
