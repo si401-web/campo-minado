@@ -87,7 +87,7 @@ hr {
 }
 
 .col-half {
-    float: left;
+    display: inline-block;
     width: 48%;
     margin-right: 5px;
 }
