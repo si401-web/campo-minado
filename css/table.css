@@ -1,6 +1,6 @@
-#historico-tabela {
+#tabela-padrao {
     width: 90%;
-    border: 2px solid #C00;
+    border: 2px solid #6E0E10;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
@@ -10,21 +10,11 @@
     margin-right: auto;
     background-color: #c9c9c9;
     overflow-x: auto;
+    border-radius: 20px;
 }
 
 #ranking {
-    width: 50%;
-    border: 2px solid #C00;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 26px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 490px;
-    background-color: #E0E0E0;
-    overflow-x: auto;
+    min-height: 82vh;
 }
 
 table {
@@ -34,26 +24,16 @@ table {
     font-size: 20px;
 }
 
-#historico-tabela table {
+#tabela-padrao table {
     border-collapse: collapse;
 }
 
-#historico-tabela th {
+#tabela-padrao th {
     border: none;
     background-color: #333;
     color: #EEE;
     border-bottom: 1px solid #ddd;
     padding: 6px 0;
-}
-
-#ranking th {
-    border: none;
-    border-radius: 3px;
-    background-color: gray;
-}
-
-#ranking tr:nth-child(odd) {
-    background-color: #ADADAD;
 }
 
 td {
@@ -62,6 +42,6 @@ td {
     padding: 4px 0;
 }
 
-#historico-tabela tr:hover {
+#tabela-padrao tr:hover {
     background-color: gray;
 }

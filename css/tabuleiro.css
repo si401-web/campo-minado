@@ -1,129 +1,106 @@
 aside#acoes {
-	position: absolute;
-	right: 12px;
-	z-index: 10;
+    position: absolute;
+    right: 12px;
+    z-index: 10;
 }
 
 #info {
-	text-align: center;
-	margin: 20px;
+    text-align: center;
+    margin: 20px;
 }
 
 #info span {
-	margin: 20px;
+    margin: 20px;
+}
+
+#tempo {
+    text-align: center;
 }
 
 #tempo span {
-	display: inline-block;
-	padding: 12px 0;
-	box-sizing: border-box;
-	font-weight: bold;
+    display: inline-block;
+    padding: 12px 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 #tempo .decorrido {
-	color: #FFF;
-	background: repeating-linear-gradient(
-		45deg,
-		#C66,
-		#633 10px,
-		#C66 10px,
-		#633 50px
-	);
+    color: #FFF;
+    background: repeating-linear-gradient( 45deg, #C66, #633 10px, #C66 10px, #633 50px);
 }
 
 #tempo .restante {
-	color: #FFF;
-	background: repeating-linear-gradient(
-		-45deg,
-		#6C6,
-		#363 10px,
-		#6C6 10px,
-		#363 50px
-	);
-	text-align: right;
+    color: #FFF;
+    background: repeating-linear-gradient( -45deg, #6C6, #363 10px, #6C6 10px, #363 50px);
+    text-align: right;
 }
 
 #tabuleiro {
-	margin: 32px;
+    margin: 32px;
 }
 
 #tabuleiro table {
-	margin: auto;
+    margin: auto;
 }
 
 #tabuleiro table tr {
-	height: 32px;
+    height: 32px;
 }
 
 #tabuleiro table tr td {
-	width: 32px;
-	background: repeating-linear-gradient(
-		-45deg,
-		#999,
-		#666 10px,
-		#999 10px,
-		#666 50px
-	);
-	text-align: center;
-	font-weight: bold;
-	cursor: pointer;
+    width: 32px;
+    background: repeating-linear-gradient( -45deg, #999, #666 10px, #999 10px, #666 50px);
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 #tabuleiro .vazio {
-	background: repeating-linear-gradient(
-		45deg,
-		#DDD,
-		#AAA 10px,
-		#DDD 10px,
-		#AAA 50px
-	);
+    background: repeating-linear-gradient( 45deg, #DDD, #AAA 10px, #DDD 10px, #AAA 50px);
 }
 
 #tabuleiro .explodiu {
-	background: repeating-linear-gradient(
-		135deg,
-		#D00,
-		#A00 10px,
-		#D00 10px,
-		#A00 50px
-	);
+    background: repeating-linear-gradient( 135deg, #D00, #A00 10px, #D00 10px, #A00 50px);
 }
 
 #tabuleiro .casa1 {
-	color: #00F;
+    color: #00F;
 }
 
 #tabuleiro .casa2 {
-	color: #0C0;
+    color: #0C0;
 }
 
 #tabuleiro .casa3 {
-	color: #C00;
+    color: #C00;
 }
 
 #tabuleiro .casa4 {
-	color: #C0C;
+    color: #C0C;
 }
 
 #tabuleiro .casa5 {
-	color: #009;
+    color: #009;
 }
 
 #tabuleiro .casa6 {
-	color: #060;
+    color: #060;
 }
 
 #tabuleiro .casa7 {
-	color: #600;
+    color: #600;
 }
 
 #tabuleiro .casa8 {
-	color: #606;
+    color: #606;
 }
 
-#qtd{
-	display: inline-block;
-	padding: 12px 0;
-	box-sizing: border-box;
-	font-weight: bold;
+#qtd {
+    display: inline-block;
+    padding: 12px 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
 }

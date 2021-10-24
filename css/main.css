@@ -1,70 +1,114 @@
 * {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-	background-color: #EEE;
-	padding-bottom: 36px;
+    background-color: #EEE;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    padding: 16px 0;
+    margin-bottom: 10px;
 }
 
 header h1 {
-	color: #000;
-	text-transform: uppercase;
+    color: #000;
+    text-transform: uppercase;
+    padding: 0 30px;
+    font-size: 35px;
+    margin: 0;
 }
 
 h2 {
     margin: auto;
 }
 
-nav {
-	float: right;
+#menu {
+    margin: 0;
 }
 
 ul#menu {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 ul#menu li {
-	float: left;
-	list-style: none;
-	margin: 12px;
+    float: left;
+    list-style: none;
+    margin: 12px;
 }
 
 ul#menu li a {
     text-decoration: none;
     color: #fff;
-    background-color: #C00;
-    border: 1px solid #C00;
+    background-color: #581d22;
+    border: 1px solid #581d22;
     padding: 10px 30px;
-    border-radius: 8px;
+    border-radius: 16px;
     width: 200px;
     text-align: center;
 }
 
 ul#menu li a:hover {
     background-color: #EEE;
-    color: #C00;
+    color: #581d22;
     box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.24), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 button {
-	background: #966;
-	border: none;
-	padding: 12px 20px;
-	color: #FFF;
-	border-radius: 2px;
-	font-weight: bold;
-	width: 100%;
+    background: #6E0E10;
+    border: none;
+    padding: 12px 20px;
+    color: #FFF;
+    border-radius: 30px;
+    font-weight: bold;
+    min-width: 50%;
+    cursor: pointer;
 }
 
 button:hover {
-    opacity: 0.75;
+    background-color: #EEE;
+    color: #6E0E10;
+    box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.24), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 hr {
-	width: 100%;
-	border-color: #C00;
+    width: 100%;
+    border-color: #6E0E10;
 }
+
+.center {
+    text-align: center;
+}
+
+.col-half {
+    float: left;
+    width: 48%;
+    margin-right: 5px;
+}
+
+.tab {
+    margin-left: 60px;
+}
+
+.historico-titulo {
+    margin: auto;
+    width: 90%;
+}
+
+.ranking-titulo {
+    width: 90%;
+}
+
+.historico-secao {
+    min-height: 95vh;
+}
+
 
 /* Scrollbar */
 
@@ -85,10 +129,9 @@ hr {
 /* Fim do scrollbar*/
 
 footer {
-	text-align: center;
-	position: fixed;
-	width: 100%;
-	bottom: 0;
-	background-color: #DDD;
-	padding: 8px;
+    text-align: center;
+    bottom: 0;
+    background-color: #DDD;
+    padding: 8px;
+    margin-top: 20px;
 }
