@@ -2,10 +2,9 @@
 <html lang="pt-BR">
 
 <head>
-    <title>Campo Minado | Alterar Cadastro</title>
+    <title>Campo Minado | Editar Cadastro</title>
     <meta charset="UTF-8" />
-    <meta name="keywords"
-        content="Unicamp, Tecnologia, Análise, Desenvolvimento, Sistemas, Programação, Web, SI401, Jogo, Campo Minado" />
+    <meta name="keywords" content="Unicamp, Tecnologia, Análise, Desenvolvimento, Sistemas, Programação, Web, SI401, Jogo, Campo Minado" />
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/form.css">
 </head>
@@ -13,6 +12,9 @@
 <body>
 
     <header>
+        <h1 title="Campo Minado">
+            Camp&#x1f4a3; Minad&#x1f4a3;
+        </h1>
         <nav>
             <ul id="menu">
                 <li>
@@ -32,32 +34,31 @@
                 </li>
             </ul>
         </nav>
-        <h1 title="Campo Minado">
-            Camp&#x1f4a3; Minad&#x1f4a3;
-        </h1>
     </header>
 
     <section class="container">
-        <h1>Cadastro</h1>
+        <h1 class="center">Editar Cadastro</h1>
         Nome Completo
+        <input class="readonly" type="text" readonly /> Data de Nascimento
+        <input type="text" placeholder="00/00/0000" /> CPF
+        <input class="readonly" type="text" placeholder="000.000.000-00" readonly /> Telefone
+        <input type="text" placeholder="(xx)xxxxx-xxxx" /> E-mail
+        <input type="email" placeholder="exemplo@dominio.com" />
+        <br /> Usuário
         <input class="readonly" type="text" readonly />
-        Data de Nascimento
-        <input type="text" placeholder="00/00/0000" />
-        CPF
-        <input class="readonly" type="text" placeholder="000.000.000-00" readonly />
-        Telefone
-        <input type="text" placeholder="(xx)xxxxx-xxxx" />
-        E-mail
-        <input type="email" />
-        <h1>Dados Para Login</h1>
-        <br />
-        Usuario
-        <input class="readonly" type="text" readonly />
-        senha
-        <input type="text" />
+
+        <div class="cadastro-campo campo-alerta">
+            <label>Senha*</label>
+            <input type="password" minlength="6" maxlength="12" placeholder="Digite a nova senha" />
+            <span>*Digite de 6 a 12 caracteres</span>
+        </div>
+
         <br />
         <br />
-        <button>Cadastrar</button>
+
+        <div class="center">
+            <button>Salvar</button>
+        </div>
     </section>
     <footer>
         SI401 | Programação para a Web

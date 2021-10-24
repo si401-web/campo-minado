@@ -4,8 +4,7 @@
 <head>
     <title>Campo Minado | Nova partida</title>
     <meta charset="UTF-8" />
-    <meta name="keywords"
-        content="Unicamp, Tecnologia, Análise, Desenvolvimento, Sistemas, Programação, Web, SI401, Jogo, Campo Minado" />
+    <meta name="keywords" content="Unicamp, Tecnologia, Análise, Desenvolvimento, Sistemas, Programação, Web, SI401, Jogo, Campo Minado" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/form.css" />
     <script type="text/javascript" src="js/nova_partida.js"></script>
@@ -14,6 +13,9 @@
 <body>
 
     <header>
+        <h1 title="Campo Minado">
+            Camp&#x1f4a3; Minad&#x1f4a3;
+        </h1>
         <nav>
             <ul id="menu">
                 <li>
@@ -33,25 +35,31 @@
                 </li>
             </ul>
         </nav>
-        <h1 title="Campo Minado">
-            Camp&#x1f4a3; Minad&#x1f4a3;
-        </h1>
     </header>
 
     <section class="container">
         <form name="partida" onsubmit="return criarPartida()" action="jogo.html" method="GET">
-            <h2>Nova partida</h2>
+            <h2 class="center">Nova partida</h2>
+
+            <hr />
+            <h3>Modalidade</h3>
+            <p class="tab">
+                <input type="radio" id="modalidade_classica" name="modalidade" value="classica" checked required />
+                <label for="modalidade_classica">Clássica</label>
+                <input type="radio" id="modalidade_rivotril" name="modalidade" value="rivotril" />
+                <label for="modalidade_rivotril">Rivotril</label>
+            </p>
 
             <hr />
 
             <h3>Dimensões</h3>
-            <p class="texto">
+            <p class="texto col-half center">
                 <label for="colunas">Colunas</label>
-                <input type="number" id="colunas" name="colunas" value="9" required min="1" max="50" />
+                <input class="center" type="number" id="colunas" name="colunas" value="9" required min="1" max="50" />
             </p>
-            <p class="texto">
+            <p class="texto col-half center">
                 <label for="linhas">Linhas</label>
-                <input type="number" id="linhas" name="linhas" value="9" required min="1" max="50" />
+                <input class="center" type="number" id="linhas" name="linhas" value="9" required min="1" max="50" />
             </p>
 
             <hr />
@@ -64,17 +72,9 @@
 
             <hr />
 
-            <h3>Modalidade</h3>
-            <p>
-                <input type="radio" id="modalidade_classica" name="modalidade" value="classica" checked required />
-                <label for="modalidade_classica">Clássica</label>
-                <input type="radio" id="modalidade_rivotril" name="modalidade" value="rivotril" />
-                <label for="modalidade_rivotril">Rivotril</label>
-            </p>
-
-            <hr />
-
-            <button type="submit">Iniciar</button>
+            <div class="center">
+                <button type="submit">Iniciar</button>
+            </div>
         </form>
     </section>
 
