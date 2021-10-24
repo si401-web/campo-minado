@@ -108,7 +108,6 @@ function timer() {
 }
 
 function adjustTimers() {
-	var qtd = document.getElementById("qtd");
 	adjustTimer("decorrido", spentTime);
 
 	if (limitTime > 0) {
@@ -152,7 +151,6 @@ function openBlock(line, column, userClicked) {
 
 	var id = "cell-" + line + "-" + column;
 	var block = document.getElementById(id);
-	var qtd = document.getElementById("qtd");
 
 	if (!block){
 		return;
@@ -197,6 +195,8 @@ function openBlock(line, column, userClicked) {
 			toggleBombs("&#9873;");
 			alert("Você ganhou!");
 		}
+
+		var qtd = document.getElementById("qtd");
 		qtd.innerHTML = "Número de células abertas: " + aux;
 	}
 }
