@@ -38,7 +38,7 @@ aside#acoes {
 }
 
 #tabuleiro {
-    margin: 32px;
+    margin: 32px 0 20px 0;
 }
 
 #tabuleiro table {
