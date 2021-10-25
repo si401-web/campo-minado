@@ -42,11 +42,13 @@ function adjustNumbers() {
 
 	document.getElementById("dimensoes").innerHTML = columns + " x " + lines + " casas";
 
+	var size = lines * columns;
+
 	if (isNaN(bombs))
 		bombs = Math.floor(Math.sqrt(size));
 
-	var size = lines * columns;
-	if (bombs >= size) bombs = size - 1;
+	if (bombs >= size)
+		bombs = size - 1;
 
 	document.getElementById("bombas").innerHTML = bombs + " bombas";
 
