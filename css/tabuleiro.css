@@ -29,6 +29,7 @@ aside#acoes {
 #tempo .decorrido {
     color: #FFF;
     background: repeating-linear-gradient( 45deg, #C66, #633 10px, #C66 10px, #633 50px);
+    text-align: left;
 }
 
 #tempo .restante {
