@@ -99,10 +99,6 @@ aside#acoes {
 }
 
 #qtd {
-    display: inline-block;
-    padding: 12px 0;
-    box-sizing: border-box;
     font-weight: bold;
     text-align: center;
-    width: 100%;
 }
