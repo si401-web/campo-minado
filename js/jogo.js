@@ -40,11 +40,15 @@ function adjustNumbers() {
 	if (columns > 50)
 		columns = 50;
 
+	document.getElementById("dimensoes").innerHTML = columns + " x " + lines + " casas";
+
 	if (isNaN(bombs))
 		bombs = Math.floor(Math.sqrt(size));
 
 	var size = lines * columns;
 	if (bombs >= size) bombs = size - 1;
+
+	document.getElementById("bombas").innerHTML = bombs + " bombas";
 
 	if (limitedTime)
 		limitTime = Math.floor(bombs / size * 1000) + 1;
