@@ -6,7 +6,7 @@ function criarPartida() {
     var bombas = form["bombas"].value;
     var modalidade = form["modalidade"].value;
 
-    if (colunas * linhas < bombas) {
+    if (colunas * linhas <= bombas) {
         alert('Não é possível ter ' + bombas + ' bombas em um tabuleiro de ' + colunas + 'x' + linhas + '.');
         return false;
     }
