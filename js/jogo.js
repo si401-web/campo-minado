@@ -178,6 +178,10 @@ function openBlock(line, column, userClicked) {
 
 		toggleBombs("&#x1f4a3;");
 		exploded = true;
+<<<<<<< HEAD
+		qtd.innerHTML = "Quantidade de Celulas: " + aux+1;
+=======
+>>>>>>> 924faa3bc86395b8067871f0f69057cbbf333a2b
 		alert("Você perdeu...");
 
 	} else if (value == 0) {
@@ -199,6 +203,10 @@ function openBlock(line, column, userClicked) {
 		win = checkWin();
 		if (win) {
 			toggleBombs("&#9873;");
+<<<<<<< HEAD
+			qtd.innerHTML = "Quantidade de Celulas: " + aux+1;
+=======
+>>>>>>> 924faa3bc86395b8067871f0f69057cbbf333a2b
 			alert("Você ganhou!");
 		}
 
