@@ -55,7 +55,7 @@ function adjustNumbers() {
 	if (limitedTime)
 		limitTime = Math.floor(bombs / size * 1000) + 1;
 }
-//Cria o Tabuleiro
+
 function createBoard() {
 	var table = "<table>";
 
@@ -74,8 +74,8 @@ function createBoard() {
 
 	var element = document.getElementById("tabuleiro");
 	element.innerHTML = table;
-}
-//Seleciona locais aleatorios para as bombas
+} //Cria o Tabuleiro
+
 function addBombs() {
 	while (bombs > 0) {
 		var l = Math.floor(Math.random() * lines);
@@ -95,13 +95,13 @@ function addBombs() {
 			bombs--;
 		}
 	}
-}
-//Função que adiciona as bombas
+} //Seleciona locais aleatorios para as bombas
+
 function plusOne(l, c) {
 	if (l >= 0 && l < lines && c >= 0 && c < columns && board[l][c] != "B") {
 		board[l][c]++;
 	}
-}
+} //Função que adiciona as bombas
 
 function timer() {
 	if (limitedTime) {
@@ -111,7 +111,7 @@ function timer() {
 	}
 
 	adjustTimers();
-}
+} //Detecta se há tempo limite e inicia recursão
 
 function adjustTimers() {
 	adjustTimer("decorrido", spentTime);
@@ -133,7 +133,7 @@ function adjustTimers() {
 			adjustTimers();
 		}
 	}, 1000)
-}
+} //Chamada recursiva que incrementa/decrementa o timer
 
 function adjustTimer(id, number) {
 	var seconds = number % 60;
@@ -149,7 +149,7 @@ function adjustTimer(id, number) {
 	var element = document.getElementById(id);
 	element.innerHTML = "&nbsp;&nbsp;&nbsp;" + minutes + ":" + seconds + "&nbsp;&nbsp;&nbsp;";
 	element.style.width = number * 100 / limitTime + "%";
-}
+} //Formata o tempo para display
 
 function openBlock(line, column, userClicked) {
 	if (finished())
