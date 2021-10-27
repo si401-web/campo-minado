@@ -7,7 +7,7 @@ function criaArray(){
   table.appendChild(tbody);
 
 // Adding the entire table to the body tag
-  document.getElementById('ranking').appendChild(table);
+  document.getElementById('tabela-padrao').appendChild(table);
   var array = ["Username","Duração","Dimensões","Nº de bombas","Modo de Jogo"]
   var arrayValor = [["Bob","01:01","20x20","20","Clássico"],
                     ["Jitters","02:02","19x19","19","Clássico"],
