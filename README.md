@@ -22,52 +22,52 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
 
 #### Login
 - [Mateus](https://github.com/promateusy)
-- Logar usuário se já existir
-- Criar session do PHP "username" com o username de quem se logou
+- [ ] Logar usuário se já existir
+- [ ] Criar session do PHP "username" com o username de quem se logou
 
 #### Logout
 - [Mateus](https://github.com/promateusy)
-- Limpar session do PHP "username"
+- [ ] Limpar session do PHP "username"
 
 #### Cadastro
 - [João](https://github.com/JoaoPortuense)
-- Criar usuário na tabela User
-- Logar usuário em seguida
-- Criar session do PHP "username" com o username de quem se logou
+- [ ] Criar usuário na tabela User
+- [ ] Logar usuário em seguida
+- [ ] Criar session do PHP "username" com o username de quem se logou
 
 #### Nova partida
 - [Karlos](https://github.com/konkah)
-- Não pode acessar se não estiver logado
-- Pegar usuário pelo username na Session do PHP "username"
-- Criar um jogo novo na tabela Game
-- Redirecionar para o jogo
+- [ ] Não pode acessar se não estiver logado
+- [ ] Pegar usuário pelo username na Session do PHP "username"
+- [ ] Criar um jogo novo na tabela Game
+- [ ] Redirecionar para o jogo
 
 #### Jogo
 - [Karlos](https://github.com/konkah)
-- Não pode acessar se não estiver logado
-- Pegar usuário pelo username na Session do PHP "username"
-- Abrir o jogo da tabela Game
-- Salvar jogo como já iniciado
-- Guardar o resultado e tempo usando AJAX
+- [ ] Não pode acessar se não estiver logado
+- [ ] Pegar usuário pelo username na Session do PHP "username"
+- [ ] Abrir o jogo da tabela Game
+- [ ] Salvar jogo como já iniciado
+- [ ] Guardar o resultado e tempo usando AJAX
 
 #### Histórico
 - [Kallynne](https://github.com/Kallynne-Rosa)
-- Não pode acessar se não estiver logado
-- Pegar usuário pelo username na Session do PHP "username"
-- Listar os jogos do usuário logado
+- [ ] Não pode acessar se não estiver logado
+- [ ] Pegar usuário pelo username na Session do PHP "username"
+- [ ] Listar os jogos do usuário logado
 
 #### Ranking
 - [Thomaz](https://github.com/Thomaz-Maques-Padovani)
-- Não pode acessar se não estiver logado
-- Listar os jogos dos 10 maiores tabuleiros
-- Ordenar por menor tempo que conseguiu vencer
+- [ ] Não pode acessar se não estiver logado
+- [ ] Listar os jogos dos 10 maiores tabuleiros
+- [ ] Ordenar por menor tempo que conseguiu vencer
 
 #### Editar cadastro
 - [João](https://github.com/JoaoPortuense)
-- Não pode acessar se não estiver logado
-- Pegar usuário pelo username na Session do PHP "username"
-- Alterar dados de usuário
-- Campos data, cpf e username não são editáveis (query só altera esses dados no backend)
+- [ ] Não pode acessar se não estiver logado
+- [ ] Pegar usuário pelo username na Session do PHP "username"
+- [ ] Alterar dados de usuário
+- [ ] Campos data, cpf e username não são editáveis (query só altera esses dados no backend)
 
 ## Front-end
 
