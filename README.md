@@ -69,6 +69,26 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
 - [ ] Alterar dados de usuário
 - [ ] Campos data, cpf e username não são editáveis (query só altera esses dados no backend)
 
+### Script da criação do banco
+- [ ] Criar tabela User
+    - [ ] ID
+    - [ ] Name
+    - [ ] Birthday
+    - [ ] CPF
+    - [ ] Phone
+    - [ ] Email
+    - [ ] Username
+    - [ ] Password
+- [ ] Criar tabela Game
+    - [ ] ID
+    - [ ] Mode
+    - [ ] Columns
+    - [ ] Rows
+    - [ ] Bombs
+    - [ ] Result
+    - [ ] Start
+    - [ ] End
+
 ## Front-end
 
 ### Menu
