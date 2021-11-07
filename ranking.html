@@ -19,7 +19,7 @@
         <nav>
             <ul id="menu">
                 <li>
-                    <a href="nova_partida.html">Partida</a>
+                    <a href="nova_partida.php">Partida</a>
                 </li>
                 <li>
                     <a href="historico.html">Histórico</a>

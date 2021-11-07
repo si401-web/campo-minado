@@ -14,7 +14,7 @@ Para rodar o projeto, abra o terminal e digite:
 docker-compose up -d
 ```
 
-Após isso, acesse http://localhost:8008/, adicionando ao final o nome da página que deseja acessar (ex: http://localhost:8008/jogo.html).
+Após isso, acesse http://localhost:8008/, adicionando ao final o nome da página que deseja acessar (ex: http://localhost:8008/jogo.php).
 
 ## Front-end
 

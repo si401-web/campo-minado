@@ -19,7 +19,7 @@
         <nav>
             <ul id="menu">
                 <li>
-                    <a href="nova_partida.html">Partida</a>
+                    <a href="nova_partida.php">Partida</a>
                 </li>
                 <li>
                     <a href="historico.html">Histórico</a>
@@ -38,7 +38,7 @@
     </header>
 
     <section class="container">
-        <form name="partida" onsubmit="return criarPartida()" action="jogo.html" method="GET">
+        <form name="partida" onsubmit="return criarPartida()" action="jogo.php" method="GET">
             <h2 class="center">Nova partida</h2>
 
             <hr />

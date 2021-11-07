@@ -8,7 +8,7 @@ loginButton.addEventListener("click", (e) => {
     const password = loginForm.senha.value;
 
     if (username === "usuario" && password === "senha") {
-        window.location.replace("nova_partida.html");
+        window.location.replace("nova_partida.php");
     } else {
         loginErrorMsg.style.opacity = 1;
     }
