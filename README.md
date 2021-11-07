@@ -1,5 +1,21 @@
 # Campo minado
 
+## Docker
+
+Adicionado docker compose para facilitar rodar o projeto sem necessidade da instalação de PHP e instalação / criação de um banco de dados MySQL.
+
+[Link de instruções de instalação do docker](https://docs.docker.com/engine/install/)
+
+[Link de instruções de instalação do docker compose](https://docs.docker.com/compose/install/)
+
+Para rodar o projeto, abra o terminal e digite:
+
+```bash
+docker-compose up -d
+```
+
+Após isso, acesse http://localhost:8008/, adicionando ao final o nome da página que deseja acessar (ex: http://localhost:8008/jogo.html).
+
 ## Front-end
 
 ### Menu

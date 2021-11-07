@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  web:
+    container_name: campo-minado-web
+    build: .
+    ports:
+      - 8008:8000
+    volumes:
+      - .:/var/app
+  db:
+    container_name: campo-minado-db
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root_pass'
+      MYSQL_USER: 'user'
+      MYSQL_PASS: 'pass'
+    ports:
+      - 3307:3306
+    volumes:
+      - ./data:/var/lib/mysql
