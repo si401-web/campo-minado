@@ -3,7 +3,14 @@
 $title = "Partida";
 $javascript = "jogo.js";
 $css = "tabuleiro.css";
-$onload = "createGame()";
+
+// pega os dados que vieram do formulário de nova_partida
+$mode = $_POST["modalidade"];
+$columns = $_POST["colunas"];
+$lines = $_POST["linhas"];
+$bombs = $_POST["bombas"];
+
+$onload = "createGame('" . $mode . "', " . $columns . ", " . $lines . ", " . $bombs . ")";
 
 require "html_inicio.php";
 

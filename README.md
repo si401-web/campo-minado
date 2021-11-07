@@ -83,7 +83,7 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
     - [ ] ID
     - [ ] Mode
     - [ ] Columns
-    - [ ] Rows
+    - [ ] Lines
     - [ ] Bombs
     - [ ] Result
     - [ ] Start

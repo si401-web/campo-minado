@@ -4,12 +4,14 @@ $title = "Nova Partida";
 $javascript = "nova_partida.js";
 $css = "form.css";
 
+
+
 require "html_inicio.php";
 
 ?>
 
 <section class="container">
-    <form name="partida" onsubmit="return criarPartida()" action="jogo.php" method="GET">
+    <form name="partida" onsubmit="return criarPartida()" action="jogo.php" method="POST">
         <h2 class="center">Nova partida</h2>
 
         <hr />

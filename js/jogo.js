@@ -1,8 +1,7 @@
-var params = new URLSearchParams(window.location.search);
-var lines = parseInt(params.get("linhas"));
-var columns = parseInt(params.get("colunas"));
-var bombs = parseInt(params.get("bombas"));
-var limitedTime = params.get("modalidade") == "rivotril";
+var limitedTime = false;
+var lines = 0;
+var columns = 0;
+var bombs = 0;
 var aux = 0;
 
 var board = []
@@ -14,7 +13,12 @@ var timeout = false;
 var spentTime = 0;
 var limitTime = 0;
 
-function createGame() {
+function createGame(mode, _columns, _lines, _bombs) {
+	limitedTime = mode == "rivotril";
+	columns = _columns;
+	lines = _lines;
+	bombs = _bombs;
+
 	adjustNumbers();
 	createBoard();
 	addBombs();
