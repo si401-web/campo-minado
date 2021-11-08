@@ -20,47 +20,39 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
 
 ### Telas
 
-#### Login
-- [Mateus](https://github.com/promateusy)
+#### Login ([Mateus](https://github.com/promateusy))
 - [ ] Logar usuário se já existir
 - [ ] Criar session do PHP "username" com o username de quem se logou
 
-#### Logout
-- [Mateus](https://github.com/promateusy)
+#### Logout ([Mateus](https://github.com/promateusy))
 - [ ] Limpar session do PHP "username"
 
-#### Cadastro
-- [João](https://github.com/JoaoPortuense)
+#### Cadastro ([João](https://github.com/JoaoPortuense))
 - [ ] Criar usuário na tabela User
 - [ ] Logar usuário em seguida
 - [ ] Criar session do PHP "username" com o username de quem se logou
 
-#### Nova partida
-- [Karlos](https://github.com/konkah)
+#### Nova partida ([Karlos](https://github.com/konkah))
 - [ ] Não pode acessar se não estiver logado
 
-#### Jogo
-- [Karlos](https://github.com/konkah)
+#### Jogo ([Karlos](https://github.com/konkah))
 - [ ] Não pode acessar se não estiver logado
 - [ ] Pegar usuário pelo username na Session do PHP "username"
 - [ ] Não permitir GET
 - [x] Criar um jogo novo na tabela Game
 - [ ] Guardar o resultado e tempo usando AJAX
 
-#### Histórico
-- [Kallynne](https://github.com/Kallynne-Rosa)
+#### Histórico ([Kallynne](https://github.com/Kallynne-Rosa))
 - [ ] Não pode acessar se não estiver logado
 - [ ] Pegar usuário pelo username na Session do PHP "username"
 - [ ] Listar os jogos do usuário logado
 
-#### Ranking
-- [Thomaz](https://github.com/Thomaz-Maques-Padovani)
+#### Ranking ([Thomaz](https://github.com/Thomaz-Maques-Padovani))
 - [ ] Não pode acessar se não estiver logado
 - [ ] Listar os jogos dos 10 maiores tabuleiros
 - [ ] Ordenar por menor tempo que conseguiu vencer
 
-#### Editar cadastro
-- [João](https://github.com/JoaoPortuense)
+#### Editar cadastro ([João](https://github.com/JoaoPortuense))
 - [ ] Não pode acessar se não estiver logado
 - [ ] Pegar usuário pelo username na Session do PHP "username"
 - [ ] Alterar dados de usuário
