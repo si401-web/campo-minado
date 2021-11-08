@@ -86,6 +86,7 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
     - [x] Start
     - [x] End
     - [ ] User_ID
+- [ ] Criar explicação de como rodar db_inicia.php e site para o professor
 
 ## Front-end
 
