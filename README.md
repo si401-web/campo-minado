@@ -38,16 +38,13 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
 #### Nova partida
 - [Karlos](https://github.com/konkah)
 - [ ] Não pode acessar se não estiver logado
-- [ ] Pegar usuário pelo username na Session do PHP "username"
-- [ ] Criar um jogo novo na tabela Game
-- [ ] Redirecionar para o jogo
 
 #### Jogo
 - [Karlos](https://github.com/konkah)
 - [ ] Não pode acessar se não estiver logado
 - [ ] Pegar usuário pelo username na Session do PHP "username"
-- [ ] Abrir o jogo da tabela Game
-- [ ] Salvar jogo como já iniciado
+- [ ] Não permitir GET
+- [x] Criar um jogo novo na tabela Game
 - [ ] Guardar o resultado e tempo usando AJAX
 
 #### Histórico
@@ -80,14 +77,15 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
     - [ ] Username
     - [ ] Password
 - [ ] Criar tabela Game
-    - [ ] ID
-    - [ ] Mode
-    - [ ] Columns
-    - [ ] Lines
-    - [ ] Bombs
-    - [ ] Result
-    - [ ] Start
-    - [ ] End
+    - [x] ID
+    - [x] Mode
+    - [x] Columns
+    - [x] Lines
+    - [x] Bombs
+    - [x] Result
+    - [x] Start
+    - [x] End
+    - [ ] User_ID
 
 ## Front-end
 

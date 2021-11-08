@@ -5,10 +5,19 @@ $javascript = "jogo.js";
 $css = "tabuleiro.css";
 
 // pega os dados que vieram do formulário de nova_partida
-$mode = $_POST["modalidade"];
-$columns = $_POST["colunas"];
-$lines = $_POST["linhas"];
-$bombs = $_POST["bombas"];
+$mode = $_POST["modalidade"] == "rivotril" ? "rivotril" : "classica";
+$columns = intval($_POST["colunas"]);
+$lines = intval($_POST["linhas"]);
+$bombs = intval($_POST["bombas"]);
+
+require "db_models.php";
+
+$game = new Game();
+$game->Mode = $mode;
+$game->Columns = $columns;
+$game->Lines = $lines;
+$game->Bombs = $bombs;
+$game->create();
 
 $onload = "createGame('" . $mode . "', " . $columns . ", " . $lines . ", " . $bombs . ")";
 
