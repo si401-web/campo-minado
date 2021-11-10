@@ -1,26 +1,33 @@
 <?php
 
+// variáveis usadas para personalizar html_inicio
 $title = "Partida";
 $javascript = "jogo.js";
 $css = "tabuleiro.css";
 
-// pega os dados que vieram do formulário de nova_partida
+// pega os dados que vieram do formulário (POST) de nova_partida
 $mode = $_POST["modalidade"] == "rivotril" ? "rivotril" : "classica";
 $columns = intval($_POST["colunas"]);
 $lines = intval($_POST["linhas"]);
 $bombs = intval($_POST["bombas"]);
 
+// inclue o arquivo que tem as classes para lidar com banco de dados
 require "db_models.php";
 
+// cria o objeto de jogo novo, com os parâmetros escolhidos
 $game = new Game();
 $game->Mode = $mode;
 $game->Columns = $columns;
 $game->Lines = $lines;
 $game->Bombs = $bombs;
+
+// chama o método que salva os dados do objeto no banco de dados
 $game->create();
 
+// passa os dados do php para o onload que irá chamar o javascript
 $onload = "createGame('" . $mode . "', " . $columns . ", " . $lines . ", " . $bombs . ")";
 
+// pega o conteúdo da parte do início do html
 require "html_inicio.php";
 
 ?>
@@ -53,6 +60,7 @@ require "html_inicio.php";
 
 <?php
 
+// pega o conteúdo da parte do fim do html
 require "html_fim.php";
 
 ?>
