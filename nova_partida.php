@@ -1,11 +1,11 @@
 <?php
 
+// variáveis usadas para personalizar html_inicio
 $title = "Nova Partida";
 $javascript = "nova_partida.js";
 $css = "form.css";
 
-
-
+// pega o conteúdo da parte do início do html
 require "html_inicio.php";
 
 ?>
@@ -53,6 +53,7 @@ require "html_inicio.php";
 
 <?php
 
+// pega o conteúdo da parte do fim do html
 require "html_fim.php";
 
 ?>
