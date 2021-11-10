@@ -1,5 +1,14 @@
 <?php
 
+// Para criar um jogo, precisa ser usado o formulário com POST
+if ($_SERVER['REQUEST_METHOD'] != "POST") {
+    // Se não for um POST, redireciona para o formulário, para a pessoa criar o jogo
+    header("Location: nova_partida.php");
+
+    // impede que continue executando o código abaixo
+    die();
+}
+
 // variáveis usadas para personalizar html_inicio
 $title = "Partida";
 $javascript = "jogo.js";
