@@ -1,5 +1,15 @@
 # Campo minado
 
+## Instruções para iniciar um banco de dados para o site
+
+No seu ambiente, crie as variáveis de ambiente com os seguintes nomes e valores:
+- `DB_SERVER`: endereço do servidor mysql
+- `DB_NAME`: nome da base de dados mysql criada vazia para o jogo
+- `DB_USER`: usuário que tenha permissão de modificar a base de dados (inclusive criar tabelas)
+- `DB_PASS`: senha do usuário
+
+Após colocar os valores nessas variáveis de ambiente, é necessário apenas executar o arquiv db_inicia.php usando o php de sua máquina.
+
 ## Docker
 
 Adicionado docker compose para facilitar rodar o projeto sem necessidade da instalação de PHP e instalação / criação de um banco de dados MySQL.
@@ -78,7 +88,7 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
     - [x] Start
     - [x] End
     - [ ] User_ID
-- [ ] Criar explicação de como rodar db_inicia.php e site para o professor
+- [x] Criar explicação de como rodar db_inicia.php e site para o professor
 
 ## Front-end
 
