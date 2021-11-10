@@ -11,11 +11,37 @@ class Game {
     public $End;
 
     public function create($userID) {
-        return execute("
+        execute("
             INSERT INTO GAME
                 (MODE, COLUMNS, `LINES`, BOMBS, START, USER_ID)
                 VALUES
                 ('$this->Mode', $this->Columns, $this->Lines, $this->Bombs, now(), $userID)
+        ");
+
+        $this->ID = $this->getLastGameCreated($userID);
+    }
+
+    public function getLastGameCreated($userID) {
+        $lastGameCreated = execute("
+            SELECT ID
+                FROM GAME
+                WHERE USER_ID=$userID
+                ORDER BY ID DESC
+        ");
+
+        return $lastGameCreated->fetch()["ID"];
+    }
+
+    public function finish($userID) {
+        if ($this->Result != 'win' && $this->Result != 'timeout' && $this->Result != 'exploded')
+            return;
+
+        execute("
+            UPDATE GAME
+                SET RESULT = '$this->Result',
+                    END = now()
+                WHERE ID = $this->ID
+                    AND USER_ID = $userID
         ");
     }
 }

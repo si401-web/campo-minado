@@ -3,6 +3,7 @@ var lines = 0;
 var columns = 0;
 var bombs = 0;
 var aux = 0;
+var gameID = 0;
 
 var board = []
 
@@ -13,7 +14,8 @@ var timeout = false;
 var spentTime = 0;
 var limitTime = 0;
 
-function createGame(mode, _columns, _lines, _bombs) {
+function createGame(_gameID, mode, _columns, _lines, _bombs) {
+	gameID = _gameID;
 	limitedTime = mode == "rivotril";
 	columns = _columns;
 	lines = _lines;
@@ -124,6 +126,7 @@ function adjustTimers() {
 		adjustTimer("restante", limitTime - spentTime);
 
 		if (spentTime == limitTime) {
+			finishAtPhp('timeout');
 			toggleBombs("&#x1f4a3;", true);
 			timeout = true;
 			alert("Você perdeu...");
@@ -180,6 +183,7 @@ function openBlock(line, column, userClicked) {
 		block.innerHTML = "&#x1f4a3;";
 		block.classList.add("explodiu")
 
+		finishAtPhp('exploded');
 		toggleBombs("&#x1f4a3;");
 		exploded = true;
 		alert("Você perdeu...");
@@ -202,6 +206,7 @@ function openBlock(line, column, userClicked) {
 	if (userClicked) {
 		win = checkWin();
 		if (win) {
+			finishAtPhp('win');
 			toggleBombs("&#9873;");
 			alert("Você ganhou!");
 		}
@@ -249,4 +254,11 @@ function checkWin() {
 
 function finished() {
 	return win || exploded || timeout;
+}
+
+function finishAtPhp(result) {
+	var ajax = new XMLHttpRequest();
+	ajax.open('POST', 'finalizar.php', true);
+	ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	ajax.send('result=' + result + '&id=' + gameID);
 }

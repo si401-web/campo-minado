@@ -11,6 +11,10 @@ if ($_SERVER['REQUEST_METHOD'] != "POST") {
 }
 
 
+// inclue o arquivo que tem as classes para lidar com banco de dados
+require "db_models.php";
+
+
 // variáveis usadas para personalizar html_inicio
 $title = "Partida";
 $javascript = "jogo.js";
@@ -24,8 +28,12 @@ $lines = intval($_POST["linhas"]);
 $bombs = intval($_POST["bombas"]);
 
 
-// inclue o arquivo que tem as classes para lidar com banco de dados
-require "db_models.php";
+// chama a session do PHP, que controla se o usuário está logado
+session_start();
+
+// pega o usuário logado
+$userID = $_SESSION["USER_ID"];
+
 
 // cria o objeto de jogo novo, com os parâmetros escolhidos
 $game = new Game();
@@ -34,19 +42,13 @@ $game->Columns = $columns;
 $game->Lines = $lines;
 $game->Bombs = $bombs;
 
-
-// chama a session do PHP, que controla se o usuário está logado
-session_start();
-
-// pega o usuário logado
-$userID = $_SESSION["USER_ID"];
-
-// chama o método que salva os dados do objeto no banco de dados
+// chama o método que cria o jogo no banco de dados
 $game->create($userID);
 
 
+
 // passa os dados do php para o onload que irá chamar o javascript
-$onload = "createGame('" . $mode . "', " . $columns . ", " . $lines . ", " . $bombs . ")";
+$onload = "createGame(" . $game->ID . ", '" . $mode . "', " . $columns . ", " . $lines . ", " . $bombs . ")";
 
 // pega o conteúdo da parte do início do html
 require "html_inicio.php";
