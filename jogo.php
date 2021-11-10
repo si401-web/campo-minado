@@ -2,23 +2,27 @@
 
 // Para criar um jogo, precisa ser usado o formulário com POST
 if ($_SERVER['REQUEST_METHOD'] != "POST") {
-    // Se não for um POST, redireciona para o formulário, para a pessoa criar o jogo
+    // Se não for um POST, redireciona para o formulário de nova_partida,
+    // para a pessoa criar o jogo novo
     header("Location: nova_partida.php");
 
     // impede que continue executando o código abaixo
     die();
 }
 
+
 // variáveis usadas para personalizar html_inicio
 $title = "Partida";
 $javascript = "jogo.js";
 $css = "tabuleiro.css";
+
 
 // pega os dados que vieram do formulário (POST) de nova_partida
 $mode = $_POST["modalidade"] == "rivotril" ? "rivotril" : "classica";
 $columns = intval($_POST["colunas"]);
 $lines = intval($_POST["linhas"]);
 $bombs = intval($_POST["bombas"]);
+
 
 // inclue o arquivo que tem as classes para lidar com banco de dados
 require "db_models.php";
@@ -30,8 +34,16 @@ $game->Columns = $columns;
 $game->Lines = $lines;
 $game->Bombs = $bombs;
 
+
+// chama a session do PHP, que controla se o usuário está logado
+session_start();
+
+// pega o usuário logado
+$userID = $_SESSION["USER_ID"];
+
 // chama o método que salva os dados do objeto no banco de dados
-$game->create();
+$game->create($userID);
+
 
 // passa os dados do php para o onload que irá chamar o javascript
 $onload = "createGame('" . $mode . "', " . $columns . ", " . $lines . ", " . $bombs . ")";

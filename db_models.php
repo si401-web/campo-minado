@@ -10,12 +10,12 @@ class Game {
     public $Start;
     public $End;
 
-    public function create() {
+    public function create($userID) {
         return execute("
             INSERT INTO GAME
-                (MODE, COLUMNS, `LINES`, BOMBS, START)
+                (MODE, COLUMNS, `LINES`, BOMBS, START, USER_ID)
                 VALUES
-                ('$this->Mode', $this->Columns, $this->Lines, $this->Bombs, now())
+                ('$this->Mode', $this->Columns, $this->Lines, $this->Bombs, now(), $userID)
         ");
     }
 }
@@ -29,7 +29,7 @@ function execute($sql) {
         $conn = new PDO("mysql:host=$server;dbname=$name", $user, $pass);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
-        $result = $conn->exec($sql);
+        $result = $conn->query($sql);
         
         $conn = null;
 

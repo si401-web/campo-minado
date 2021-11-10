@@ -32,29 +32,29 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
 
 #### Login ([Mateus](https://github.com/promateusy))
 - [ ] Logar usuário se já existir
-- [ ] Criar session do PHP "username" com o username de quem se logou
+- [ ] Criar session do PHP "user_id" com o user_id de quem se logou
 
 #### Logout ([Mateus](https://github.com/promateusy))
-- [ ] Limpar session do PHP "username"
+- [ ] Limpar session do PHP "user_id"
 
 #### Cadastro ([João](https://github.com/JoaoPortuense))
 - [ ] Criar usuário na tabela User
 - [ ] Logar usuário em seguida
-- [ ] Criar session do PHP "username" com o username de quem se logou
+- [ ] Criar session do PHP "user_id" com o user_id de quem se logou
 
 #### Nova partida ([Karlos](https://github.com/konkah))
 - [ ] Não pode acessar se não estiver logado
 
 #### Jogo ([Karlos](https://github.com/konkah))
 - [ ] Não pode acessar se não estiver logado
-- [ ] Pegar usuário pelo username na Session do PHP "username"
+- [ ] Pegar usuário pelo user_id na Session do PHP "user_id"
 - [ ] Não permitir GET
 - [x] Criar um jogo novo na tabela Game
 - [ ] Guardar o resultado e tempo usando AJAX
 
 #### Histórico ([Kallynne](https://github.com/Kallynne-Rosa))
 - [ ] Não pode acessar se não estiver logado
-- [ ] Pegar usuário pelo username na Session do PHP "username"
+- [ ] Pegar usuário pelo user_id na Session do PHP "user_id"
 - [ ] Listar os jogos do usuário logado
 
 #### Ranking ([Thomaz](https://github.com/Thomaz-Maques-Padovani))
@@ -64,21 +64,21 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
 
 #### Editar cadastro ([João](https://github.com/JoaoPortuense))
 - [ ] Não pode acessar se não estiver logado
-- [ ] Pegar usuário pelo username na Session do PHP "username"
+- [ ] Pegar usuário pelo user_id na Session do PHP "user_id"
 - [ ] Alterar dados de usuário
 - [ ] Campos data, cpf e username não são editáveis (query só altera esses dados no backend)
 
 ### Script da criação do banco
-- [ ] Criar tabela User
-    - [ ] ID
-    - [ ] Name
-    - [ ] Birthday
-    - [ ] CPF
-    - [ ] Phone
-    - [ ] Email
-    - [ ] Username
-    - [ ] Password
-- [ ] Criar tabela Game
+- [x] Criar tabela User
+    - [x] ID
+    - [x] Name
+    - [x] Birthday
+    - [x] CPF
+    - [x] Phone
+    - [x] Email
+    - [x] Username
+    - [x] Password
+- [x] Criar tabela Game
     - [x] ID
     - [x] Mode
     - [x] Columns
@@ -87,7 +87,7 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
     - [x] Result
     - [x] Start
     - [x] End
-    - [ ] User_ID
+    - [x] User_ID
 - [x] Criar explicação de como rodar db_inicia.php e site para o professor
 
 ## Front-end
