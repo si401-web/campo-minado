@@ -31,7 +31,7 @@
                     <a href="editarCadastro.html">Editar cadastro</a>
                 </li>
                 <li>
-                    <a href="login.html">Logout</a>
+                    <a href="logout.php">Logout</a>
                 </li>
             </ul>
         </nav>
