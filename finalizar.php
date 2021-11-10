@@ -11,16 +11,15 @@ if ($_SERVER['REQUEST_METHOD'] != "POST") {
 }
 
 
-// inclue o arquivo que tem as classes para lidar com banco de dados
-require "db_models.php";
-
-
-// chama a session do PHP, que controla se o usuário está logado
-session_start();
+// redireciona para o login se o usuário não estiver logado
+require "testar_logado.php";
 
 // pega o usuário logado
 $userID = $_SESSION["USER_ID"];
 
+
+// inclue o arquivo que tem as classes para lidar com banco de dados
+require "db_models.php";
 
 // cria o objeto de jogo para ser atualizado, com o resultado
 $game = new Game();

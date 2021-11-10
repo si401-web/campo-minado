@@ -1,5 +1,8 @@
 <?php
 
+// redireciona para o login se o usuário não estiver logado
+require "testar_logado.php";
+
 // variáveis usadas para personalizar html_inicio
 $title = "Nova Partida";
 $javascript = "nova_partida.js";

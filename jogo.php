@@ -11,14 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] != "POST") {
 }
 
 
-// inclue o arquivo que tem as classes para lidar com banco de dados
-require "db_models.php";
+// redireciona para o login se o usuário não estiver logado
+require "testar_logado.php";
 
-
-// variáveis usadas para personalizar html_inicio
-$title = "Partida";
-$javascript = "jogo.js";
-$css = "tabuleiro.css";
+// pega o usuário logado
+$userID = $_SESSION["USER_ID"];
 
 
 // pega os dados que vieram do formulário (POST) de nova_partida
@@ -28,12 +25,8 @@ $lines = intval($_POST["linhas"]);
 $bombs = intval($_POST["bombas"]);
 
 
-// chama a session do PHP, que controla se o usuário está logado
-session_start();
-
-// pega o usuário logado
-$userID = $_SESSION["USER_ID"];
-
+// inclue o arquivo que tem as classes para lidar com banco de dados
+require "db_models.php";
 
 // cria o objeto de jogo novo, com os parâmetros escolhidos
 $game = new Game();
@@ -46,6 +39,10 @@ $game->Bombs = $bombs;
 $game->create($userID);
 
 
+// variáveis usadas para personalizar html_inicio
+$title = "Partida";
+$javascript = "jogo.js";
+$css = "tabuleiro.css";
 
 // passa os dados do php para o onload que irá chamar o javascript
 $onload = "createGame(" . $game->ID . ", '" . $mode . "', " . $columns . ", " . $lines . ", " . $bombs . ")";
