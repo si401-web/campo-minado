@@ -36,6 +36,8 @@ class Game {
         if ($this->Result != 'win' && $this->Result != 'timeout' && $this->Result != 'exploded')
             return;
 
+        print($this->Result);
+
         execute("
             UPDATE GAME
                 SET RESULT = '$this->Result',
