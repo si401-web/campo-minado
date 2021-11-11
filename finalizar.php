@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] != "POST") {
 require "testar_logado.php";
 
 // pega o usuário logado
-$userID = $_SESSION["USER_ID"];
+$userID = $_SESSION["user_id"];
 
 
 // inclue o arquivo que tem as classes para lidar com banco de dados
