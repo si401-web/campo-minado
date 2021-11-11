@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] != "POST") {
 require "testar_logado.php";
 
 // pega o usuário logado
-$userID = $_SESSION["USER_ID"];
+$userID = $_SESSION["user_id"];
 
 
 // pega os dados que vieram do formulário (POST) de nova_partida
