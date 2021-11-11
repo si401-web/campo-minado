@@ -3,7 +3,7 @@
 session_start();
 
 // Testa se existe usuário logado
-if (!isset($_SESSION["USER_ID"])) {
+if (!isset($_SESSION["user_id"])) {
     // Se não existir, redireciona para o login
     header("Location: login.php");
 
