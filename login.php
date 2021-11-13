@@ -53,7 +53,7 @@ include('conexao.php');
 
     if(!empty($dados['SendLogin'])){
         //var_dump($dados);
-        $query_usuario = "SELECT * FROM user WHERE USERNAME =:nomeUsuario  LIMIT 1";
+        $query_usuario = "SELECT * FROM USER WHERE USERNAME =:nomeUsuario  LIMIT 1";
         $result_usuario = $conn-> prepare($query_usuario);
         $result_usuario->bindParam(':nomeUsuario', $dados['nomeUsuario'], PDO::PARAM_STR);
         $result_usuario->execute();
