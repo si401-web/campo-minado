@@ -4,24 +4,12 @@ ob_start();
 include('conexao.php');
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
+<?php
+$title = "Login";
+$css = "form.css";
 
-<head>
-    <title>Campo Minado | Login</title>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="Unicamp, Tecnologia, Análise, Desenvolvimento, Sistemas, Programação, Web, SI401, Jogo, Campo Minado" />
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/form.css">
-
-</head>
-
-<body>
-    <header>
-        <h1 title="Campo Minado">
-            Camp&#x1f4a3; Minad&#x1f4a3;
-        </h1>
-    </header>
+require "html_inicio.php"
+?>
 
     <section class="container login-secao">
         <h2>Entre no Campo Minado</h2>
@@ -43,10 +31,6 @@ include('conexao.php');
         <p id="login-error-msg">Usuário/senha inválido. Tente novamente. </p>
 
     </section>
-
-    <footer>
-        SI401 | Programação para a Web
-    </footer>
 
     <?php
     $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
@@ -84,5 +68,4 @@ include('conexao.php');
     // '".$dados['nomeUsuario']."'
     ?>
 
-</body>
-</html>
+<?php require "html_fim.php" ?>
