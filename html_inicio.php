@@ -7,6 +7,7 @@
     <meta name="keywords" content="Unicamp, Tecnologia, Análise, Desenvolvimento, Sistemas, Programação, Web, SI401, Jogo, Campo Minado" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/<?php echo $css ?>" />
+    <link rel="icon" type="image/x-icon" href="favicon.png">
 
     <?php if (isset($javascript)) { ?>
         <script src="js/<?php echo $javascript ?>"></script>
