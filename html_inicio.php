@@ -20,7 +20,7 @@
         <h1 title="Campo Minado">
             Camp&#x1f4a3; Minad&#x1f4a3;
         </h1>
-        <?php if (isset($SESSION["user_ID"])) { ?>
+        <?php if (isset($_SESSION["user_id"])) { ?>
             <nav>
                 <ul id="menu">
                     <li>
