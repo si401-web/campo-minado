@@ -34,6 +34,10 @@ require "html_inicio.php"
 
     <?php
     $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+	
+	if (isset($_SESSION['user_id'])) {
+        header("Location: nova_partida.php");
+    }
 
     if(!empty($dados['SendLogin'])){
         //var_dump($dados);
