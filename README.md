@@ -58,7 +58,7 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
 - [ ] Listar os jogos do usuário logado
 
 #### Ranking ([Thomaz](https://github.com/Thomaz-Maques-Padovani))
-- [ ] Não pode acessar se não estiver logado
+- [x] Não pode acessar se não estiver logado
 - [ ] Listar os jogos dos 10 maiores tabuleiros
 - [ ] Ordenar por menor tempo que conseguiu vencer
 

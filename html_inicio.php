@@ -30,7 +30,7 @@
                         <a href="historico.html">Histórico</a>
                     </li>
                     <li>
-                        <a href="ranking.html">Ranking</a>
+                        <a href="ranking.php">Ranking</a>
                     </li>
                     <li>
                         <a href="editarCadastro.html">Editar cadastro</a>
