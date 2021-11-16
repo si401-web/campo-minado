@@ -1,4 +1,4 @@
-<?
+<?php
 // chama a session do PHP, que controla se o usuário está logado
 session_start();
 
