@@ -3,8 +3,8 @@ include('conexao.php');
 ?>
 
 <?php
-/* // redireciona para o login se o usuário não estiver logado
-require "testar_logado.php"; */
+// redireciona para o login se o usuário não estiver logado
+require "testar_logado.php";
 
 // inclue o arquivo que tem as classes para lidar com banco de dados
 require "db_models.php";
