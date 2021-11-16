@@ -1,8 +1,4 @@
 <?php
-include('conexao.php');
-?>
-
-<?php
 // redireciona para o login se o usuário não estiver logado
 require "testar_logado.php";
 
