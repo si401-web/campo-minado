@@ -59,8 +59,8 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
 
 #### Ranking ([Thomaz](https://github.com/Thomaz-Maques-Padovani))
 - [x] Não pode acessar se não estiver logado
-- [ ] Listar os jogos dos 10 maiores tabuleiros
-- [ ] Ordenar por menor tempo que conseguiu vencer
+- [x] Listar os jogos dos 10 maiores tabuleiros
+- [x] Ordenar por menor tempo que conseguiu vencer
 
 #### Editar cadastro ([João](https://github.com/JoaoPortuense))
 - [ ] Não pode acessar se não estiver logado
