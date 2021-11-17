@@ -19,7 +19,7 @@ echo "</tr>";
 if ($arrayDados == null) {
     echo "<td colspan=\"5\">Sem dados para exibir.</td>";
 } else {
-    for ($j = 0; $j < 10; $j++) {
+    for ($j = 0; $j < count($arrayDados); $j++) {
         $time = adjustTime($arrayDados[$j][7] - $arrayDados[$j][6]);
         $name;
         for ($i = 0; $i < count($arrayUsers); $i++) {
