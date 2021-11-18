@@ -22,7 +22,7 @@ require "html_inicio.php"
         $usuario = $_POST['Usuario'];
         $senha = $_POST['Senha'];
 
-        $query = $conn->query("INSERT INTO USER (NAME,BIRTHDAY,CPF,PHONE,EMAIL,USERNAME,PASSWORD) VALUES ('$name','$dataNascimento',' $cpf','$telefone','$email','$usuario','$senha')");
+        $query = $conn->query("INSERT INTO USER (NAME,BIRTHDAY,CPF,PHONE,EMAIL,USERNAME,PASSWORD) VALUES ('$name','$dataNascimento','$cpf','$telefone','$email','$usuario','$senha')");
 
         if($query){
             echo "Cadastro Realizado com Sucesso";
@@ -50,7 +50,7 @@ require "html_inicio.php"
 
             <div class="cadastro-campo">
                 <label>CPF</label>
-                <input type="text" name="CPF" placeholder="00000000000" />
+                <input type="text" name="CPF" maxlength="11" placeholder="00000000000" />
             </div>
 
             <div class="cadastro-campo">
