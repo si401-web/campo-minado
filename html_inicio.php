@@ -3,7 +3,6 @@
 
 <head>
     <title>Campo Minado | <?php echo $title ?></title>
-    <meta charset="UTF-8" />
     <meta name="keywords" content="Unicamp, Tecnologia, Análise, Desenvolvimento, Sistemas, Programação, Web, SI401, Jogo, Campo Minado" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/<?php echo $css ?>" />
