@@ -53,9 +53,9 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
 - [x] Guardar o resultado e tempo usando AJAX
 
 #### Histórico ([Kallynne](https://github.com/Kallynne-Rosa))
-- [ ] Não pode acessar se não estiver logado
-- [ ] Pegar usuário pelo user_id na Session do PHP "user_id"
-- [ ] Listar os jogos do usuário logado
+- [x] Não pode acessar se não estiver logado
+- [x] Pegar usuário pelo user_id na Session do PHP "user_id"
+- [x] Listar os jogos do usuário logado
 
 #### Ranking ([Thomaz](https://github.com/Thomaz-Maques-Padovani))
 - [x] Não pode acessar se não estiver logado
