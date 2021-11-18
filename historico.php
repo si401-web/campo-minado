@@ -27,31 +27,70 @@ require "html_inicio.php";
 
 require "conexao.php";
 
-$query = "SELECT u.NAME, g.START, g.END, g.COLUMNS, g.LINES, g.MODE, g.BOMBS, g.RESULT FROM user u INNER JOIN game g ON u.ID = g.USER_ID WHERE u.ID = " . $_SESSION['user_id'];
-$historico = $conn->query($query)->fetchAll();
+$dadosPartidas = $conn->query("SELECT * FROM GAME WHERE USER_ID = " . $_SESSION["user_id"])->fetchAll();
+$arrayUsers = $conn->query("SELECT * FROM USER WHERE ID = " . $_SESSION["user_id"])->fetchAll();
 
-$qtd = count($historico); 
-for ($i = 0; $i < $qtd; $i++) {    
-    $dataInicio = (new DateTime($historico[$i]["START"]))->format('d/m/Y H:i');
-    $dataFim = $historico[$i]["END"];
-    $tipoDataFim = gettype($dataFim);
-    $subtrHoras = (strtotime($dataFim) - strtotime($historico[$i]["START"])) - 3600;
+usort($dadosPartidas, "sortByDate");
 
-    if($tipoDataFim == "NULL"){
-        $tempoPartida = "Data inválida";
-    } else {
-        $tempoPartida = date('H:i:s', $subtrHoras);
+$qtd = count($dadosPartidas);
+
+for ($i = 0; $i < $qtd; $i++) {  
+    $dataInicio = date_sub(new DateTime($dadosPartidas[$i][7]),date_interval_create_from_date_string("3 hours"));
+    $dadosPartidas[$i][6] = substr($dadosPartidas[$i][6], 11, 8);
+    $dadosPartidas[$i][6] = strtotime($dadosPartidas[$i][6]);
+    $dadosPartidas[$i][7] = substr($dadosPartidas[$i][7], 11, 8);
+    $dadosPartidas[$i][7] = strtotime($dadosPartidas[$i][7]);
+    $tempoPartida = adjustTime($dadosPartidas[$i][7] - $dadosPartidas[$i][6]);
+    $nome;
+
+    for ($j = 0; $j < count($arrayUsers); $j++) {
+        if($dadosPartidas[$i][8] == $arrayUsers[$j][0]){
+            $nome = $arrayUsers[$j][6];
+        }
     }
 
     echo "<tr>";
-    echo "<td>" . $historico[$i]["NAME"] . "</td>";
+    echo "<td>" . $nome . "</td>";
     echo "<td>" . $tempoPartida . "</td>";
-    echo "<td>" . $historico[$i]["LINES"] . "x" . $historico[$i]["COLUMNS"] . "</td>";
-    echo "<td>" . $historico[$i]["MODE"] . "</td>";
-    echo "<td>" . $historico[$i]["BOMBS"] . "</td>";
-    echo "<td>" . $historico[$i]["RESULT"] . "</td>";
-    echo "<td>" . $dataInicio . "</td>"; 
+    echo "<td>" . $dadosPartidas[$i]["LINES"] . "x" . $dadosPartidas[$i]["COLUMNS"] . "</td>";
+    echo "<td>" . $dadosPartidas[$i]["MODE"] . "</td>";
+    echo "<td>" . $dadosPartidas[$i]["BOMBS"] . "</td>";
+    echo "<td>" . $dadosPartidas[$i]["RESULT"] . "</td>";
+    echo "<td>" . date_format($dataInicio, 'd/m/Y H:i') . "</td>"; 
     echo "</tr>";
+}
+
+function convertTime($vet){
+    for ($i = 0; $i < count($vet); $i++) {
+        $vet[$i][6] = substr($vet[$i][6], 11, 8);
+        $vet[$i][6] = strtotime($vet[$i][6]);
+        $vet[$i][7] = substr($vet[$i][7], 11, 8);
+        $vet[$i][7] = strtotime($vet[$i][7]);
+    }
+
+    return $vet;
+}
+
+function adjustTime($number){
+    $seconds = $number % 60;
+    if ($seconds < 10) {
+        $seconds = "0" + $seconds;
+    }
+
+    $minutes = ($number - $seconds) / 60;
+    if ($minutes < 10) {
+        $minutes = "0" + $minutes;
+    }
+
+    return str_pad($minutes, 2, "0", STR_PAD_LEFT) . ":" . str_pad($seconds, 2, "0", STR_PAD_LEFT);
+}
+
+function sortByDate($a, $b){
+    if ($a[6] === $b[6]) {
+        return 0;
+    } else {
+        return ($a[6] > $b[6]) ? -1 : 1;
+    }
 }
 
 ?>
