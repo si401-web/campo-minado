@@ -2,16 +2,11 @@
 require "testar_logado.php";
 include('conexao.php');
 ?>
-
 <?php
 require "db_models.php";
-
 $title = "Cadastro";
 $css = "form.css";
-
-require "html_inicio.php"
 ?>
-
 <?php
 $userID = $_SESSION["user_id"];
 
@@ -19,7 +14,6 @@ $result_usuario = "SELECT * FROM USER WHERE ID = $userID";
 $resultado_usuario = $conn->query($result_usuario);
 $row_usuario = $resultado_usuario->fetch(PDO::FETCH_ASSOC);
 ?>
-
 <?php
 if(isset($_POST['SendCadastro'])){
     $name = $_POST['nome'];
@@ -32,14 +26,16 @@ if(isset($_POST['SendCadastro'])){
 
     $query = $conn->query("UPDATE USER SET NAME = '$name', BIRTHDAY = '$dataNascimento', CPF = '$cpf', PHONE = '$telefone', EMAIL = '$email', USERNAME = '$usuario', PASSWORD = '$senha' WHERE ID = '$userID'");
     if($query){
-        echo "Cadastro Realizado com Sucesso";
+        header("Location: editarcadastro.php");
     }
     else{
         echo "Não foi possivel cadastrar";
     }
 }
 ?>
-
+<?php
+require "html_inicio.php"
+?>
 <section>
         <form class="container" id="cadastro-form" method="POST">
         <h2 class="center">Editar Cadastro</h2>
