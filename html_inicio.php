@@ -27,7 +27,7 @@
                         <a href="nova_partida.php">Partida</a>
                     </li>
                     <li>
-                        <a href="historico.html">Histórico</a>
+                        <a href="historico.php">Histórico</a>
                     </li>
                     <li>
                         <a href="ranking.php">Ranking</a>
