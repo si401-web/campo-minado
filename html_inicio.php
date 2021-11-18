@@ -33,7 +33,7 @@
                         <a href="ranking.php">Ranking</a>
                     </li>
                     <li>
-                        <a href="editarCadastro.html">Editar cadastro</a>
+                        <a href="editarCadastro.php">Editar cadastro</a>
                     </li>
                     <li>
                         <a href="logout.php">Logout</a>

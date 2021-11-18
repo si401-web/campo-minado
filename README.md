@@ -38,9 +38,9 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
 - [x] Limpar session do PHP "user_id"
 
 #### Cadastro ([João](https://github.com/JoaoPortuense))
-- [ ] Criar usuário na tabela User
-- [ ] Logar usuário em seguida
-- [ ] Criar session do PHP "user_id" com o user_id de quem se logou
+- [x] Criar usuário na tabela User
+- [x] Logar usuário em seguida
+- [x] Criar session do PHP "user_id" com o user_id de quem se logou
 
 #### Nova partida ([Karlos](https://github.com/konkah)) :heavy_check_mark:
 - [x] Não pode acessar se não estiver logado
@@ -63,10 +63,10 @@ Após isso, acesse http://localhost:8008/, adicionando ao final o nome da págin
 - [x] Ordenar por menor tempo que conseguiu vencer
 
 #### Editar cadastro ([João](https://github.com/JoaoPortuense))
-- [ ] Não pode acessar se não estiver logado
-- [ ] Pegar usuário pelo user_id na Session do PHP "user_id"
-- [ ] Alterar dados de usuário
-- [ ] Campos data, cpf e username não são editáveis (query só altera esses dados no backend)
+- [x] Não pode acessar se não estiver logado
+- [x] Pegar usuário pelo user_id na Session do PHP "user_id"
+- [x] Alterar dados de usuário
+- [x] Campos data, cpf e username não são editáveis (query só altera esses dados no backend)
 
 ### Script da criação do banco
 - [x] Criar tabela User

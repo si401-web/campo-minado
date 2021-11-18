@@ -24,7 +24,7 @@ require "html_inicio.php"
 
         </form>
 
-        <span class="cad">Ainda não tem conta? <a href="cadastro.html">Faça seu cadastro.</a></span>
+        <span class="cad">Ainda não tem conta? <a href="cadastro.php">Faça seu cadastro.</a></span>
 
         <br />
         <br />
