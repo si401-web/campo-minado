@@ -50,7 +50,7 @@ require "html_inicio.php"
 
             <div class="cadastro-campo">
                 <label>CPF</label>
-                <input type="text" name="CPF" maxlength="11" placeholder="00000000000" />
+                <input type="text" name="CPF" minlength="11" maxlength="11" placeholder="00000000000" />
             </div>
 
             <div class="cadastro-campo">
