@@ -60,17 +60,6 @@ for ($i = 0; $i < $qtd; $i++) {
     echo "</tr>";
 }
 
-function convertTime($vet){
-    for ($i = 0; $i < count($vet); $i++) {
-        $vet[$i][6] = substr($vet[$i][6], 11, 8);
-        $vet[$i][6] = strtotime($vet[$i][6]);
-        $vet[$i][7] = substr($vet[$i][7], 11, 8);
-        $vet[$i][7] = strtotime($vet[$i][7]);
-    }
-
-    return $vet;
-}
-
 function adjustTime($number){
     $seconds = $number % 60;
     if ($seconds < 10) {
