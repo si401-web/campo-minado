@@ -23,7 +23,7 @@ if ($arrayDados == null) {
         $time = adjustTime($arrayDados[$j][7] - $arrayDados[$j][6]);
         $name;
         for ($i = 0; $i < count($arrayUsers); $i++) {
-            if($arrayDados[$j][0] == $arrayUsers[$i][0]){
+            if($arrayDados[$j][8] == $arrayUsers[$i][0]){
                 $name = $arrayUsers[$i][6];
             }
         }
